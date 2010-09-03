@@ -35,6 +35,7 @@ autocmd FileType python set omnifunc=pythoncomplete#Complete
 " tabbing
 map <silent><A-Right> :tabnext<CR> 
 map <silent><A-Left> :tabprevious<CR>
+map <silent><C-x> :tabclose<CR>
 
 " auto nerd tree
 autocmd VimEnter * NERDTree
