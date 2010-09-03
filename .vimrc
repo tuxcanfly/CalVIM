@@ -15,7 +15,6 @@ colorscheme elflord
 " Hide python cache files (.pyc) in NERDTree
 let NERDTreeIgnore=['\.pyc']
 
-
 let g:pydiction_location = '/home/tuxcanfly/.vim/after/ftplugin/complete-dict'
 
 " Buffers - explore/next/previous: Alt-F12, F12, Shift-F12.
@@ -26,3 +25,17 @@ nnoremap <silent> <S-F12> :bp<CR>
 " insert newline but dont enter insert mode
 map <S-Enter> O<Esc>j
 map <CR> o<Esc>k
+
+" python ctags 
+set tags+=$HOME/.vim/tags/python.ctags
+
+" autocompletion
+autocmd FileType python set omnifunc=pythoncomplete#Complete
+
+" tabbing
+map <silent><A-Right> :tabnext<CR> 
+map <silent><A-Left> :tabprevious<CR>
+
+" auto nerd tree
+autocmd VimEnter * NERDTree
+autocmd VimEnter * wincmd p
