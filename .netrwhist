@@ -1,11 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/home/tuxcanfly/Work'
-let g:netrw_dirhist_2='/home/tuxcanfly/Work/Django-1.2.1'
-let g:netrw_dirhist_3='/home/tuxcanfly/Work/Django-1.2.1/django'
-let g:netrw_dirhist_4='/home/tuxcanfly/Work/Django-1.2.1/django/views'
-let g:netrw_dirhist_5='/home/tuxcanfly/Work/Django-Socialauth/example/templates/example'
-let g:netrw_dirhist_6='/home/tuxcanfly/Work/agiliq_test/agiliqcom/blogango_repo'
-let g:netrw_dirhist_7='/home/tuxcanfly/.vim'
-let g:netrw_dirhist_8='/home/tuxcanfly/.vim/ftplugin/python'
-let g:netrw_dirhist_9='/home/tuxcanfly/.vim'
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/home/tuxcanfly/Work/netconference/templates'

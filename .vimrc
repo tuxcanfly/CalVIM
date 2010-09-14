@@ -8,7 +8,11 @@ set softtabstop=4
 set expandtab
 set number
 
+" toggle NERDTree
 map <F4> :NERDTreeToggle<CR>
+
+"toggle Taglist
+map <F3> :TlistToggle<CR>
 
 colorscheme elflord
 
