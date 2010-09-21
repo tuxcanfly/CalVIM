@@ -2,11 +2,29 @@ filetype plugin indent on
 filetype plugin on
 
 set noic
-set tabstop=4
-set shiftwidth=4
 set softtabstop=4
 set expandtab
-set number
+set nowrap        " don't wrap lines
+set tabstop=4     " a tab is four spaces
+set backspace=indent,eol,start
+                  " allow backspacing over everything in insert mode
+set autoindent    " always set autoindenting on
+set copyindent    " copy the previous indentation on autoindenting
+set number        " always show line numbers
+set shiftwidth=4  " number of spaces to use for autoindenting
+set shiftround    " use multiple of shiftwidth when indenting with '<' and '>'
+set showmatch     " set show matching parenthesis
+set ignorecase    " ignore case when searching
+set smartcase     " ignore case if search pattern is all lowercase,
+                  "    case-sensitive otherwise
+set smarttab      " insert tabs on the start of a line according to
+                  "    shiftwidth, not tabstop
+set hlsearch      " highlight search terms
+set incsearch     " show search matches as you type
+set nobackup
+set noswapfile
+set pastetoggle=<F2>
+set nocompatible
 
 " toggle NERDTree
 map <F4> :NERDTreeToggle<CR>
@@ -14,7 +32,7 @@ map <F4> :NERDTreeToggle<CR>
 "toggle Taglist
 map <F3> :TlistToggle<CR>
 
-colorscheme elflord
+colorscheme pablo
 
 " Hide python cache files (.pyc) in NERDTree
 let NERDTreeIgnore=['\.pyc']
@@ -27,8 +45,7 @@ nnoremap <silent> <F12> :bn<CR>
 nnoremap <silent> <S-F12> :bp<CR>
 
 " insert newline but dont enter insert mode
-map <S-Enter> O<Esc>j
-map <CR> o<Esc>k
+map <Enter> o<Esc>k
 
 " python ctags 
 set tags+=$HOME/.vim/tags/python.ctags
@@ -37,10 +54,20 @@ set tags+=$HOME/.vim/tags/python.ctags
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 
 " tabbing
-map <silent><A-Right> :tabnext<CR> 
-map <silent><A-Left> :tabprevious<CR>
+map <silent><A-Right> :bnext<CR> 
+map <silent><A-Left> :bprevious<CR>
 map <silent><C-x> :tabclose<CR>
 
 " auto nerd tree
 autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p
+
+" clear search highlight
+nnoremap <leader><space> :noh<cr>
+
+" autosave on blur
+au FocusLost * :wa
+
+" clipboard
+set clipboard=unnamed
+

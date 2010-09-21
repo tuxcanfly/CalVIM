@@ -16,7 +16,7 @@ if !exists("jslint_command")
 endif
 
 if !exists("jslint_command_options")
-  let jslint_command_options = '-nofilelisting -nocontext -nosummary -nologo -process'
+  let jslint_command_options = '-nofilelisting -nocontext -nosummary -nologo -conf ~/.jslint.conf -process'
 endif
 
 if !exists("jslint_highlight_color")
