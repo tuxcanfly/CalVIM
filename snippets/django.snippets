@@ -109,6 +109,8 @@ snippet stackedinline
 		model = $1
 		extra = ${2:3}
 
+# imports
+
 snippet User
 	from django.contrib.auth.models import User
 
@@ -124,4 +126,12 @@ snippet http
 snippet shortcuts
 	from django.shortcuts import get_object_or_404, redirect
 
+snippet require_POST
+	from django.views.decorators.http import require_POST
+
+# Misc
+
+snippet debug
+	import ipdb
+	ipdb.set_trace()
 
