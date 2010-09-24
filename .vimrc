@@ -4,6 +4,8 @@ call pathogen#runtime_append_all_bundles()
 filetype plugin on
 filetype plugin indent on
 
+colorscheme elflord
+
 set noic
 set softtabstop=4
 set expandtab
@@ -40,8 +42,6 @@ map <F4> :NERDTreeToggle<CR>
 "toggle Taglist
 map <F3> :TlistToggle<CR>
 
-colorscheme elflord
-
 " Hide python cache files (.pyc) in NERDTree
 let NERDTreeIgnore=['\.pyc']
 
@@ -61,7 +61,6 @@ map <silent><C-x> :tabclose<CR>
 
 " auto nerd tree
 autocmd VimEnter * NERDTree
-autocmd VimEnter * wincmd p
 
 " clear search highlight
 nnoremap <leader><space> :noh<cr>
