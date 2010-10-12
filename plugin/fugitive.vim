@@ -513,7 +513,7 @@ function! s:Status() abort
   try
     Gpedit :
     wincmd P
-    nnoremap <buffer> <silent> q    :<C-U>bdelete<CR>
+    nnoremap <buffer> <silent> q   :<C-U>bdelete<CR>
   catch /^fugitive:/
     return 'echoerr v:errmsg'
   endtry

@@ -42,6 +42,11 @@ map <F4> :NERDTreeToggle<CR>
 "toggle Taglist
 map <F3> :TlistToggle<CR>
 
+" toggle fugitive status
+map <silent><leader>s :Gstatus<CR>
+" toggle fugitive diff
+map <silent><leader>d :Gdiff<CR>
+
 " Hide python cache files (.pyc) in NERDTree
 let NERDTreeIgnore=['\.pyc']
 
@@ -72,3 +77,6 @@ set clipboard=unnamed
 inoremap jj <ESC>
 nnoremap ; :
 
+" vimango
+"let vimango_app_prefix = 'apps/'
+let vimango_template_prefix = 'templates/'
