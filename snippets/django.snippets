@@ -129,9 +129,19 @@ snippet shortcuts
 snippet require_POST
 	from django.views.decorators.http import require_POST
 
+snippet slugify
+	from django.template.defaultfilters import slugify
+
 # Misc
 
 snippet debug
 	import ipdb
 	ipdb.set_trace()
+
+snippet manager
+	class ${1:ManagerName}(models.Manager):
+		use_for_related_fields = ${2:True}
+		
+		def get_query_set(self):
+			return super($1, self).get_query_set().filter(${3:filter})
 
