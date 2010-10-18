@@ -22,14 +22,16 @@ set showmatch     " set show matching parenthesis
 set ignorecase    " ignore case when searching
 set smartcase     " ignore case if search pattern is all lowercase,
                   "    case-sensitive otherwise
-set smarttab      " insert tabs on the start of a line according to
-                  "    shiftwidth, not tabstop
 set hlsearch      " highlight search terms
 set incsearch     " show search matches as you type
 set nobackup
 set noswapfile
 set pastetoggle=<F2>
 set nocompatible
+
+set makeprg=python\ manage.py\ validate " django stuff
+
+set cmdheight=2 " silent shell prompts
 
 " snipmates for django
 " python and html are mostly django
@@ -47,11 +49,15 @@ map <silent><leader>s :Gstatus<CR>
 " toggle fugitive diff
 map <silent><leader>d :Gdiff<CR>
 
-" Hide python cache files (.pyc) in NERDTree
+" change escpae
+:inoremap <C-leader> <Esc>
+
+" ignore python cruft
 let NERDTreeIgnore=['\.pyc']
+set wildignore=*.py[co]
 
 " insert newline but dont enter insert mode
-map <Enter> o<Esc>k
+map <silent><leader><Enter> o<Esc>k
 
 " python ctags 
 set tags+=$HOME/.vim/tags/python.ctags
@@ -74,9 +80,8 @@ nnoremap <leader><space> :noh<cr>
 set clipboard=unnamed
 
 " shortcuts
-inoremap jj <ESC>
 nnoremap ; :
 
 " vimango
-"let vimango_app_prefix = 'apps/'
+let vimango_app_prefix = 'apps/'
 let vimango_template_prefix = 'templates/'
