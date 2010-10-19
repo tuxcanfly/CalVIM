@@ -38,6 +38,9 @@ set cmdheight=2 " silent shell prompts
 autocmd FileType python set ft=python.django
 autocmd FileType html set ft=htmldjango.html
 
+" nerdtree commentor
+map <Leader>c ,c
+
 " toggle NERDTree
 map <F4> :NERDTreeToggle<CR>
 
