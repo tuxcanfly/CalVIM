@@ -124,7 +124,7 @@ snippet http
 	from django.http import HttpResponse, HttpResponseRedirect, HttpResponseForbidden
 
 snippet shortcuts
-	from django.shortcuts import get_object_or_404, redirect
+	from django.shortcuts import get_object_or_404, redirect, reverse
 
 snippet require_POST
 	from django.views.decorators.http import require_POST
@@ -132,6 +132,8 @@ snippet require_POST
 snippet slugify
 	from django.template.defaultfilters import slugify
 
+snippet inlineformset
+	from django.forms.models import inlineformset_factory
 # Misc
 
 snippet debug
