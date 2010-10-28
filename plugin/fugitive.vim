@@ -564,6 +564,7 @@ function! s:StageDiff(bang) abort
     execute 'Gedit '.s:fnameescape('/'.filename)
     return 'Gdiff'.a:bang
   endif
+  wincmd p
 endfunction
 
 function! s:StageToggle(lnum1,lnum2) abort

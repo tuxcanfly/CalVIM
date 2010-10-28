@@ -981,7 +981,7 @@ endfunction
 " Tlist_Get_Buffer_Filetype
 " Get the filetype for the specified buffer
 function! s:Tlist_Get_Buffer_Filetype(bnum)
-    let buf_ft = getbufvar(a:bnum, '&filetype')
+    let buf_ft = split(getbufvar(a:bnum, '&filetype'), '\.')[0]
 
     if bufloaded(a:bnum)
         " For loaded buffers, the 'filetype' is already determined

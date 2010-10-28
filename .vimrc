@@ -87,4 +87,6 @@ nnoremap ; :
 
 " vimango
 let vimango_app_prefix = 'apps/'
-let vimango_template_prefix = 'templates/'
+let vimango_template_prefix = 'templates'
+
+:set hidden
