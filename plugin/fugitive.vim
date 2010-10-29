@@ -1064,6 +1064,7 @@ function! s:Diff(bang,...) abort
     diffthis
     wincmd p
     diffthis
+    wincmd p
     return ''
   elseif a:0
     if a:1 ==# ''
@@ -1098,6 +1099,7 @@ function! s:Diff(bang,...) abort
     diffthis
     wincmd p
     diffthis
+    wincmd p
     return ''
   catch /^fugitive:/
     return 'echoerr v:errmsg'
