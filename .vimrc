@@ -90,3 +90,6 @@ let vimango_app_prefix = 'apps/'
 let vimango_template_prefix = 'templates'
 
 :set hidden
+
+let Tlist_Close_On_Select = 1
+let Tlist_Use_Right_Window = 1
