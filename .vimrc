@@ -93,3 +93,6 @@ let vimango_template_prefix = 'templates'
 
 let Tlist_Close_On_Select = 1
 let Tlist_Use_Right_Window = 1
+
+" clear ^M messup
+noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
