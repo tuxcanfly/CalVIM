@@ -13,3 +13,6 @@
 [submodule "bundle/vimango"]
 	path = bundle/vimango
 	url = git@github.com:tuxcanfly/ViMango.git
+[submodule "bundle/taglist"]
+	path = bundle/taglist
+	url = http://github.com/mexpolk/vim-taglist.git
