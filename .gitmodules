@@ -10,3 +10,6 @@
 [submodule "bundle/surround"]
 	path = bundle/surround
 	url = http://github.com/tpope/vim-surround.git
+[submodule "bundle/vimango"]
+	path = bundle/vimango
+	url = git@github.com:tuxcanfly/ViMango.git
