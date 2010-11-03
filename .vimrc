@@ -96,3 +96,11 @@ let Tlist_Use_Right_Window = 1
 
 " clear ^M messup
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
+
+"Mapping used to execute sparkup.
+"g:sparkupExecuteMapping (Default: '<c-e>') -
+
+"Mapping used to jump to the next empty tag/attribute.
+"let g:sparkupNextMapping (Default: '<c-n>')
+
+autocmd FileType python set omnifunc=pysmell#Complete
