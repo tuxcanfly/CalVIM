@@ -16,3 +16,6 @@
 [submodule "bundle/taglist"]
 	path = bundle/taglist
 	url = http://github.com/mexpolk/vim-taglist.git
+[submodule "snippets_repo"]
+	path = snippets_repo
+	url = git@github.com:tuxcanfly/snipmate_for_django.git
