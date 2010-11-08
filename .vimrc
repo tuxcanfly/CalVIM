@@ -33,13 +33,9 @@ set makeprg=python\ manage.py\ validate " django stuff
 
 set cmdheight=2 " silent shell prompts
 
-" snipmates for django
-" python and html are mostly django
-autocmd FileType python set ft=python.django
-autocmd FileType html set ft=htmldjango.html
-
 " nerdtree commentor
 map <Leader>c ,c
+map <Leader>e <C-e>
 
 " toggle NERDTree
 map <F4> :NERDTreeToggle<CR>
@@ -65,9 +61,6 @@ map <silent><leader><Enter> o<Esc>k
 " python ctags 
 set tags+=$HOME/.vim/tags/python.ctags
 
-" autocompletion
-autocmd FileType python set omnifunc=pythoncomplete#Complete
-
 " tabbing
 map <silent><A-Right> :tabnext<CR> 
 map <silent><A-Left> :tabprevious<CR>
@@ -87,7 +80,7 @@ nnoremap ; :
 
 " vimango
 let vimango_app_prefix = 'apps/'
-let vimango_template_prefix = 'templates'
+let vimango_template_prefix = 'templates/'
 
 :set hidden
 
@@ -104,3 +97,7 @@ noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 "let g:sparkupNextMapping (Default: '<c-n>')
 
 autocmd FileType python set omnifunc=pysmell#Complete
+set gfn=Inconsolata\ Medium\ 13
+if has("gui_running")
+    colorscheme ir_black
+endif
