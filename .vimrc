@@ -73,7 +73,7 @@ autocmd VimEnter * NERDTree
 nnoremap <leader><space> :noh<cr>
 
 " clipboard
-set clipboard=unnamed
+set clipboard="+
 
 " shortcuts
 nnoremap ; :
@@ -91,7 +91,7 @@ let Tlist_Use_Right_Window = 1
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
 "Mapping used to execute sparkup.
-"g:sparkupExecuteMapping (Default: '<c-e>') -
+let sparkupExecuteMapping = '<tab>'
 
 "Mapping used to jump to the next empty tag/attribute.
 "let g:sparkupNextMapping (Default: '<c-n>')
@@ -100,4 +100,10 @@ autocmd FileType python set omnifunc=pysmell#Complete
 set gfn=Inconsolata\ Medium\ 13
 if has("gui_running")
     colorscheme ir_black
+    set guioptions-=T   " Get rid of toolbar "
+    set guioptions-=m   " Get rid of menu    "
 endif
+
+set tags+=/home/tuxcanfly/.tags/tags
+set path+=new_templates,templates
+let g:closetag_default_xml=1
