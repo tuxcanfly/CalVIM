@@ -19,3 +19,6 @@
 [submodule "snippets_repo"]
 	path = snippets_repo
 	url = git@github.com:tuxcanfly/snipmate_for_django.git
+[submodule "bundle/supertab"]
+	path = bundle/supertab
+	url = https://github.com/ervandew/supertab.git

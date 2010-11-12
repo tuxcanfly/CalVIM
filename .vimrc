@@ -90,12 +90,6 @@ let Tlist_Use_Right_Window = 1
 " clear ^M messup
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
-"Mapping used to execute sparkup.
-let sparkupExecuteMapping = '<tab>'
-
-"Mapping used to jump to the next empty tag/attribute.
-"let g:sparkupNextMapping (Default: '<c-n>')
-
 autocmd FileType python set omnifunc=pysmell#Complete
 set gfn=Inconsolata\ Medium\ 13
 if has("gui_running")
@@ -105,5 +99,15 @@ if has("gui_running")
 endif
 
 set tags+=/home/tuxcanfly/.tags/tags
-set path+=new_templates,templates
+set path+=new_templates,templates,apps
 let g:closetag_default_xml=1
+
+" open gf in new tab
+:nnoremap gf <C-W>gf
+
+"new tab
+map <Leader>t :tabnew<CR>
+set includeexpr=substitute(v:fname,'\\.','/','g')
+set suffixesadd=.py
+"nnoremap <C-]> <Esc>:exe "ptjump " . expand("<cword>")<Esc>
+
