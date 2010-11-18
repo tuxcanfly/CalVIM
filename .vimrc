@@ -12,7 +12,7 @@ set expandtab
 set nowrap        " don't wrap lines
 set tabstop=4     " a tab is four spaces
 set backspace=indent,eol,start
-                  " allow backspacing over everything in insert mode
+		  " allow backspacing over everything in insert mode
 set autoindent    " always set autoindenting on
 set copyindent    " copy the previous indentation on autoindenting
 set number        " always show line numbers
@@ -21,7 +21,7 @@ set shiftround    " use multiple of shiftwidth when indenting with '<' and '>'
 set showmatch     " set show matching parenthesis
 set ignorecase    " ignore case when searching
 set smartcase     " ignore case if search pattern is all lowercase,
-                  "    case-sensitive otherwise
+		  "    case-sensitive otherwise
 set hlsearch      " highlight search terms
 set incsearch     " show search matches as you type
 set nobackup
@@ -111,3 +111,10 @@ set includeexpr=substitute(v:fname,'\\.','/','g')
 set suffixesadd=.py
 "nnoremap <C-]> <Esc>:exe "ptjump " . expand("<cword>")<Esc>
 
+" Visually select the text that was last edited/pasted
+nmap gV `[v`]
+
+" Visual indent after paste
+nnoremap gp "+gP`[V`]=
+nnoremap p p`[V`]=
+let g:sparkupNextMapping = '<c-x>'
