@@ -4,9 +4,6 @@
 [submodule "bundle/snipmate"]
 	path = bundle/snipmate
 	url = http://github.com/msanders/snipmate.vim.git
-[submodule "bundle/vim-sparkup"]
-	path = bundle/vim-sparkup
-	url = http://github.com/bingaman/vim-sparkup.git
 [submodule "bundle/surround"]
 	path = bundle/surround
 	url = http://github.com/tpope/vim-surround.git
@@ -22,3 +19,9 @@
 [submodule "bundle/supertab"]
 	path = bundle/supertab
 	url = https://github.com/ervandew/supertab.git
+[submodule "bundle/vim-sparkup"]
+	path = bundle/vim-sparkup
+	url = https://github.com/bingaman/vim-sparkup.git
+[submodule "bundle/ragtag"]
+	path = bundle/ragtag
+	url = https://github.com/tpope/vim-ragtag.git
