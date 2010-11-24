@@ -202,7 +202,7 @@ hi link javaScriptNumber      Number
 
 
 " Special for Python
-"hi  link pythonEscape         Keyword      
+hi  link pythonEscape         Keyword      
 
 
 " Special for CSharp
