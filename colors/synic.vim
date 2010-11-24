@@ -67,10 +67,10 @@ hi WildMenu gui=NONE guifg=Black guibg=SkyBlue4 cterm=NONE ctermfg=16 ctermbg=60
 hi Folded guifg=#f4aba2 guibg=bg ctermfg=217 ctermbg=NONE
 hi FoldColumn guifg=DarkBlue guibg=Grey ctermfg=18 ctermbg=250
 
-hi DiffText gui=bold guifg=NONE guibg=LightGoldenrodYellow cterm=bold ctermfg=NONE ctermbg=196
-hi DiffAdd gui=NONE guifg=LightGreen guibg=gray18 cterm=NONE ctermfg=21 ctermbg=195
-hi DiffChange gui=NONE guifg=white guibg=gray18 cterm=NONE ctermfg=231 ctermbg=102
-hi DiffDelete gui=None guifg=LightBlue guibg=gray18 cterm=None ctermfg=152 ctermbg=195
+hi DiffText gui=bold guifg=NONE guibg=HotPink4 cterm=bold ctermfg=NONE ctermbg=196
+hi DiffAdd gui=bold guifg=NONE guibg=DarkMagenta cterm=NONE ctermfg=21 ctermbg=195
+hi DiffChange gui=bold guifg=NONE guibg=gray18 cterm=NONE ctermfg=231 ctermbg=102
+hi DiffDelete gui=bold guifg=NONE guibg=gray18 cterm=None ctermfg=152 ctermbg=195
 
 " Syntax highlighting
 hi Comment          guifg=#7C7C7C     guibg=NONE        gui=NONE      ctermfg=darkgray    ctermbg=NONE        cterm=NONE
