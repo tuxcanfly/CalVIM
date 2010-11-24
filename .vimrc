@@ -29,7 +29,7 @@ set noswapfile
 set pastetoggle=<F2>
 set nocompatible
 
-set makeprg=python\ manage.py\ validate " django stuff
+"set makeprg=python\ manage.py\ validate " django stuff
 
 set cmdheight=2 " silent shell prompts
 
@@ -93,7 +93,7 @@ noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 autocmd FileType python set omnifunc=pysmell#Complete
 set gfn=Inconsolata\ Medium\ 13
 if has("gui_running")
-    colorscheme ir_black
+    colorscheme synic
     set guioptions-=T   " Get rid of toolbar "
     set guioptions-=m   " Get rid of menu    "
 endif
@@ -117,4 +117,4 @@ nmap gV `[v`]
 " Visual indent after paste
 nnoremap gp "+gP`[V`]=
 nnoremap p p`[V`]=
-let g:sparkupNextMapping = '<c-x>'
+let g:sparkupNextMapping = '<c-h>'
