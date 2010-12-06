@@ -64,7 +64,7 @@ set tags+=$HOME/.vim/tags/python.ctags
 " tabbing
 map <silent><A-Right> :tabnext<CR> 
 map <silent><A-Left> :tabprevious<CR>
-map <silent><C-x> :tabclose<CR>
+"map <silent><C-x> :tabclose<CR>
 
 " auto nerd tree
 autocmd VimEnter * NERDTree
@@ -120,4 +120,6 @@ nnoremap gp "+gP`[V`]=
 nnoremap p p`[V`]=
 let g:sparkupNextMapping = '<c-h>'
 
-"noremap <Up><Up><Down><Down><Left><Right><Left><Right>ba :botright !figlet "Vim    FTW"<CR>
+"noremap^M<Up><Up><Down><Down><Left><Right><Left><Right>ba :botright !figlet "Vim    FTW"<CR>
+map <leader>gp :%vimgrep <cword> **/*.py<CR>
+map <leader>gh :%vimgrep <cword> **/*.html<CR>
