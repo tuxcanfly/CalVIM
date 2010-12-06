@@ -91,9 +91,10 @@ let Tlist_Use_Right_Window = 1
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
 autocmd FileType python set omnifunc=pysmell#Complete
-set gfn=Inconsolata\ Medium\ 13
+"set gfn=Inconsolata\ Medium\ 13
+set gfn=Monaco\ 12
 if has("gui_running")
-    colorscheme synic
+    colorscheme ir_black
     set guioptions-=T   " Get rid of toolbar "
     set guioptions-=m   " Get rid of menu    "
 endif
@@ -118,3 +119,5 @@ nmap gV `[v`]
 nnoremap gp "+gP`[V`]=
 nnoremap p p`[V`]=
 let g:sparkupNextMapping = '<c-h>'
+
+"noremap <Up><Up><Down><Down><Left><Right><Left><Right>ba :botright !figlet "Vim    FTW"<CR>
