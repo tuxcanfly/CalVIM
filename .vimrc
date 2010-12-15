@@ -91,8 +91,8 @@ let Tlist_Use_Right_Window = 1
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
 autocmd FileType python set omnifunc=pysmell#Complete
-"set gfn=Inconsolata\ Medium\ 13
-set gfn=Monaco\ 12
+set gfn=Inconsolata\ Medium\ 13
+"set gfn=Monaco\ 12
 if has("gui_running")
     colorscheme ir_black
     set guioptions-=T   " Get rid of toolbar "
@@ -125,5 +125,9 @@ map <leader>gp :%vimgrep <cword> **/*.py<CR>
 map <leader>gh :%vimgrep <cword> **/*.html<CR>
 
 " Conque shell
-map <leader>e :ConqueTermSplit bash<CR>
+map <leader>e :ConqueTermSplit ipython<CR>
+map <F6> :ConqueTermSplit bash<CR>
 
+" prevent cursor jumping in v-mode
+vnoremap <S-Up> <Up>
+vnoremap <S-Down> <Down>
