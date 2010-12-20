@@ -1,5 +1,5 @@
 " bundles
-call pathogen#runtime_append_all_bundles() 
+call pathogen#runtime_append_all_bundles()
 
 filetype plugin on
 filetype plugin indent on
@@ -58,11 +58,11 @@ set wildignore=*.py[co]
 " insert newline but dont enter insert mode
 map <silent><leader><Enter> o<Esc>k
 
-" python ctags 
+" python ctags
 set tags+=$HOME/.vim/tags/python.ctags
 
 " tabbing
-map <silent><A-Right> :tabnext<CR> 
+map <silent><A-Right> :tabnext<CR>
 map <silent><A-Left> :tabprevious<CR>
 map <silent><A-x> :tabclose<CR>
 
@@ -131,3 +131,6 @@ map <F6> :ConqueTermSplit bash<CR>
 " prevent cursor jumping in v-mode
 vnoremap <S-Up> <Up>
 vnoremap <S-Down> <Down>
+
+" remove trailing whitespace
+map <leader>w :FixWhitespace<CR>
