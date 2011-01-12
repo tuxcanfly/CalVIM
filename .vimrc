@@ -91,8 +91,8 @@ let Tlist_Use_Right_Window = 1
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
 autocmd FileType python set omnifunc=pysmell#Complete
-set gfn=Inconsolata\ Medium\ 13
-"set gfn=Monaco\ 12
+"set gfn=Inconsolata\ Medium\ 13
+set gfn=Monaco\ 12
 if has("gui_running")
     colorscheme ir_black
     set guioptions-=T   " Get rid of toolbar "
@@ -134,3 +134,14 @@ vnoremap <S-Down> <Down>
 
 " remove trailing whitespace
 map <leader>w :FixWhitespace<CR>
+
+"copy
+vmap <F8> "+ygv"zy`>
+"paste (Shift-F8 to paste after normal cursor, Ctrl-F8 to paste over visual selection)
+nmap <F8> "zgP
+nmap <S-F8> "zgp
+imap <F8> <C-r><C-o>z
+vmap <C-F8> "zp`]
+cmap <F8> <C-r><C-o>z
+"copy register
+autocmd FocusGained * let @z=@+
