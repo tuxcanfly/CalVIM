@@ -91,8 +91,8 @@ let Tlist_Use_Right_Window = 1
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
 autocmd FileType python set omnifunc=pysmell#Complete
-"set gfn=Inconsolata\ Medium\ 13
-set gfn=Monaco\ 12
+set gfn=Inconsolata\ Medium\ 13
+"set gfn=Monaco\ 12
 if has("gui_running")
     colorscheme ir_black
     set guioptions-=T   " Get rid of toolbar "
@@ -145,3 +145,10 @@ vmap <C-F8> "zp`]
 cmap <F8> <C-r><C-o>z
 "copy register
 autocmd FocusGained * let @z=@+
+
+" python and html are mostly django
+autocmd FileType python set ft=python.django
+autocmd FileType html set ft=htmldjango.html
+
+" quicker trans tags around selection
+let g:surround_{char2nr("t")} = "{% trans \"\r\" %}"
