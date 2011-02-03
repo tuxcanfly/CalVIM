@@ -146,9 +146,17 @@ cmap <F8> <C-r><C-o>z
 "copy register
 autocmd FocusGained * let @z=@+
 
-" python and html are mostly django
-autocmd FileType python set ft=python.django
+" this causes problems with taglist
+"autocmd FileType python set ft=python.django
 autocmd FileType html set ft=htmldjango.html
 
 " quicker trans tags around selection
-let g:surround_{char2nr("t")} = "{% trans \"\r\" %}"
+"let g:surround_{char2nr("t")} = "{% trans \"\r\" %}"
+"let g:surround_{char2nr("l")} = "{% blocktrans %}\r{% endblocktrans %}"
+"nmap <F11> viwSt
+"nmap <F12> vitSl
+
+" stealing tpope's statusline
+set statusline=[%n]%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+set laststatus=2
+
