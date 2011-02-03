@@ -9,13 +9,13 @@
 	url = http://github.com/tpope/vim-surround.git
 [submodule "bundle/vimango"]
 	path = bundle/vimango
-	url = git@github.com:tuxcanfly/ViMango.git
+    url = https://github.com/tuxcanfly/ViMango.git
 [submodule "bundle/taglist"]
 	path = bundle/taglist
 	url = http://github.com/mexpolk/vim-taglist.git
 [submodule "snippets_repo"]
 	path = snippets_repo
-	url = git@github.com:tuxcanfly/snipmate_for_django.git
+	url = https://github.com/tuxcanfly/snipmate_for_django.git
 [submodule "bundle/supertab"]
 	path = bundle/supertab
 	url = https://github.com/ervandew/supertab.git
