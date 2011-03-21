@@ -24,8 +24,8 @@ if !exists("jslint_highlight_color")
 endif
 
 " set up auto commands
-autocmd BufWritePost,FileWritePost *.js call JavascriptLint()
-autocmd BufWinLeave * call s:MaybeClearCursorLineColor()
+"autocmd BufWritePost,FileWritePost *.js call JavascriptLint()
+"autocmd BufWinLeave * call s:MaybeClearCursorLineColor()
 
 " Runs the current file through javascript lint and 
 " opens a quickfix window with any warnings

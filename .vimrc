@@ -62,8 +62,8 @@ map <silent><leader><Enter> o<Esc>k
 set tags+=$HOME/.vim/tags/python.ctags
 
 " tabbing
-map <silent><A-Right> :tabnext<CR>
-map <silent><A-Left> :tabprevious<CR>
+map <silent><A-k> :tabnext<CR>
+map <silent><A-j> :tabprevious<CR>
 map <silent><A-x> :tabclose<CR>
 
 " auto nerd tree
@@ -79,7 +79,7 @@ set clipboard="+
 nnoremap ; :
 
 " vimango
-let vimango_app_prefix = 'apps/'
+"let vimango_app_prefix = 'apps/'
 let vimango_template_prefix = 'templates/'
 
 :set hidden
@@ -113,11 +113,11 @@ set suffixesadd=.py
 "nnoremap <C-]> <Esc>:exe "ptjump " . expand("<cword>")<Esc>
 
 " Visually select the text that was last edited/pasted
-nmap gV `[v`]
+"nmap gV `[v`]
 
 " Visual indent after paste
-nnoremap gp "+gP`[V`]=
-nnoremap p p`[V`]=
+"nnoremap gp "+gP`[V`]=
+"nnoremap p p`[V`]=
 let g:sparkupNextMapping = '<c-h>'
 
 "noremap^M<Up><Up><Down><Down><Left><Right><Left><Right>ba :botright !figlet "Vim    FTW"<CR>
