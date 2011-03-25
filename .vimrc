@@ -134,6 +134,9 @@ vnoremap <S-Down> <Down>
 " remove trailing whitespace
 map <leader>w :FixWhitespace<CR>
 
+" paste without yanking
+vmap r "_dP
+
 "copy
 vmap <F8> "+ygv"zy`>
 "paste (Shift-F8 to paste after normal cursor, Ctrl-F8 to paste over visual selection)
@@ -159,3 +162,11 @@ autocmd FileType html set ft=htmldjango.html
 set statusline=[%n]%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 set laststatus=2
 
+" disable pysmell, it requires PYSMELLTAGS
+set omnifunc=pythoncomplete#Complete
+
+function! s:Gentags()
+    :! find -name \*.py -print | xargs ptags.py
+endfunction
+
+command! -nargs=0 Gentags call s:Gentags()

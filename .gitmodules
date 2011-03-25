@@ -34,3 +34,6 @@
 [submodule "bundle/conque"]
 	path = bundle/conque
 	url = https://github.com/vim-scripts/Conque-Shell.git
+[submodule "bundle/omnicomplete"]
+	path = bundle/omnicomplete
+	url = https://github.com/vim-scripts/pythoncomplete.git
