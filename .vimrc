@@ -58,9 +58,6 @@ set wildignore=*.py[co]
 " insert newline but dont enter insert mode
 map <silent><leader><Enter> o<Esc>k
 
-" python ctags
-set tags+=$HOME/.vim/tags/python.ctags
-
 " tabbing
 map <silent><A-right> :tabnext<CR>
 map <silent><A-left> :tabprevious<CR>
@@ -90,15 +87,14 @@ let Tlist_Use_Right_Window = 1
 " clear ^M messup
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
-autocmd FileType python set omnifunc=pysmell#Complete
 "set gfn=Inconsolata\ Medium\ 13
 "set gfn=Monaco\ 11
 set gfn=Droid\ Sans\ Mono\ 12
 if has("gui_running")
-    colorscheme ir_black
+    colorscheme synic
 endif
 
-set tags+=/home/tuxcanfly/.tags/tags
+set tags+=/home/tuxcanfly/.tags/django13.tags
 set path+=new_templates,templates,apps
 let g:closetag_default_xml=1
 
@@ -158,15 +154,25 @@ autocmd FileType html set ft=htmldjango.html
 "nmap <F11> viwSt
 "nmap <F12> vitSl
 
+" use omnicompletion
+set omnifunc=pythoncomplete#Complete
+
 " stealing tpope's statusline
 set statusline=[%n]%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 set laststatus=2
-
-" disable pysmell, it requires PYSMELLTAGS
-set omnifunc=pythoncomplete#Complete
 
 function! s:Gentags()
     :! find -name \*.py -print | xargs ptags.py
 endfunction
 
 command! -nargs=0 Gentags call s:Gentags()
+
+nmap K i<cr><esc>k$
+
+nmap <leader>fp :Git push origin master<CR>
+nmap <leader>fm :Git pull origin master<CR>
+
+" django virtualenv
+if filereadable($VIRTUAL_ENV . '/.vimrc')
+    source $VIRTUAL_ENV/.vimrc
+endif

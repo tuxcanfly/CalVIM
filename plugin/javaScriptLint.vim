@@ -26,6 +26,7 @@ endif
 " set up auto commands
 "autocmd BufWritePost,FileWritePost *.js call JavascriptLint()
 "autocmd BufWinLeave * call s:MaybeClearCursorLineColor()
+nmap <leader>j call JavascriptLint()
 
 " Runs the current file through javascript lint and 
 " opens a quickfix window with any warnings
