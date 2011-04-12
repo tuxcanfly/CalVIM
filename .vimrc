@@ -91,7 +91,8 @@ noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 "set gfn=Monaco\ 11
 set gfn=Droid\ Sans\ Mono\ 12
 if has("gui_running")
-    colorscheme synic
+    set background=light
+    colorscheme ir_black
 endif
 
 set tags+=/home/tuxcanfly/.tags/django13.tags
@@ -150,7 +151,7 @@ autocmd FileType html set ft=htmldjango.html
 
 " quicker trans tags around selection
 "let g:surround_{char2nr("t")} = "{% trans \"\r\" %}"
-"let g:surround_{char2nr("l")} = "{% blocktrans %}\r{% endblocktrans %}"
+let g:surround_{char2nr("l")} = "login_required(\r)"
 "nmap <F11> viwSt
 "nmap <F12> vitSl
 
@@ -176,3 +177,5 @@ nmap <leader>fm :Git pull origin master<CR>
 if filereadable($VIRTUAL_ENV . '/.vimrc')
     source $VIRTUAL_ENV/.vimrc
 endif
+
+let ropevim_guess_project=1
