@@ -92,7 +92,7 @@ noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 set gfn=Droid\ Sans\ Mono\ 12
 if has("gui_running")
     set background=light
-    colorscheme ir_black
+    colorscheme koehler_mod
 endif
 
 set tags+=/home/tuxcanfly/.tags/django13.tags
@@ -179,3 +179,5 @@ if filereadable($VIRTUAL_ENV . '/.vimrc')
 endif
 
 let ropevim_guess_project=1
+
+nmap <leader>i :RopeAutoImport<CR>
