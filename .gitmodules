@@ -43,3 +43,9 @@
 [submodule "bundle/camelcasemotion"]
 	path = bundle/camelcasemotion
 	url = https://github.com/bkad/CamelCaseMotion.git
+[submodule "bundle/webindent"]
+	path = bundle/webindent
+	url = https://github.com/vim-scripts/JavaScript-Indent.git
+[submodule "bundle/matchit"]
+	path = bundle/matchit
+	url = https://github.com/vim-scripts/matchit.zip.git
