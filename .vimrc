@@ -92,7 +92,7 @@ noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 set gfn=Droid\ Sans\ Mono\ 12
 if has("gui_running")
     set background=light
-    colorscheme koehler_mod
+    colorscheme molokai
 endif
 
 set tags+=/home/tuxcanfly/.tags/django13.tags
@@ -147,11 +147,12 @@ autocmd FocusGained * let @z=@+
 
 " this causes problems with taglist
 "autocmd FileType python set ft=python.django
-autocmd FileType html set ft=htmldjango.html
+"autocmd FileType html set ft=htmldjango.html
 
 " quicker trans tags around selection
 "let g:surround_{char2nr("t")} = "{% trans \"\r\" %}"
 let g:surround_{char2nr("l")} = "login_required(\r)"
+let g:surround_{char2nr("d")} = "{{ \r }}"
 "nmap <F11> viwSt
 "nmap <F12> vitSl
 
@@ -181,3 +182,4 @@ endif
 let ropevim_guess_project=1
 
 nmap <leader>i :RopeAutoImport<CR>
+set path+=surveys/templates,accounts/templates
