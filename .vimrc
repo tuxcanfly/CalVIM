@@ -52,7 +52,6 @@ map <silent><leader>d :Gdiff<CR>
 :inoremap <C-leader> <Esc>
 
 " ignore python cruft
-let NERDTreeIgnore=['\.pyc']
 set wildignore=*.py[co]
 
 " insert newline but dont enter insert mode
@@ -62,9 +61,6 @@ map <silent><leader><Enter> o<Esc>k
 map <silent><A-right> :tabnext<CR>
 map <silent><A-left> :tabprevious<CR>
 map <silent><A-x> :tabclose<CR>
-
-" auto nerd tree
-autocmd VimEnter * NERDTree
 
 " clear search highlight
 nnoremap <leader><space> :noh<cr>
@@ -92,7 +88,7 @@ noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 set gfn=Droid\ Sans\ Mono\ 12
 if has("gui_running")
     set background=light
-    colorscheme molokai
+    colorscheme ir_black
 endif
 
 set tags+=/home/tuxcanfly/.tags/django13.tags
@@ -150,11 +146,11 @@ autocmd FocusGained * let @z=@+
 "autocmd FileType html set ft=htmldjango.html
 
 " quicker trans tags around selection
-"let g:surround_{char2nr("t")} = "{% trans \"\r\" %}"
+let g:surround_{char2nr("t")} = "{% trans \"\r\" %}"
 let g:surround_{char2nr("l")} = "login_required(\r)"
 let g:surround_{char2nr("d")} = "{{ \r }}"
-"nmap <F11> viwSt
-"nmap <F12> vitSl
+nmap <F11> viwSt
+nmap <F12> vitSt
 
 " use omnicompletion
 set omnifunc=pythoncomplete#Complete

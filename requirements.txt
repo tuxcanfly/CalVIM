@@ -1,3 +1,0 @@
-ptags.py
-pyflakes
-ipython

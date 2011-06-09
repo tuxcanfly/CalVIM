@@ -7,38 +7,17 @@
 [submodule "bundle/surround"]
 	path = bundle/surround
 	url = http://github.com/tpope/vim-surround.git
-[submodule "bundle/vimango"]
-	path = bundle/vimango
-    url = https://github.com/tuxcanfly/ViMango.git
 [submodule "bundle/taglist"]
 	path = bundle/taglist
 	url = http://github.com/mexpolk/vim-taglist.git
-[submodule "snippets_repo"]
-	path = snippets_repo
-	url = https://github.com/tuxcanfly/snipmate_for_django.git
-[submodule "bundle/supertab"]
-	path = bundle/supertab
-	url = https://github.com/ervandew/supertab.git
-[submodule "bundle/vim-sparkup"]
-	path = bundle/vim-sparkup
-	url = https://github.com/bingaman/vim-sparkup.git
 [submodule "bundle/ragtag"]
 	path = bundle/ragtag
 	url = https://github.com/tpope/vim-ragtag.git
 [submodule "bundle/unimpaired"]
 	path = bundle/unimpaired
 	url = https://github.com/tpope/vim-unimpaired.git
-[submodule "bundle/pep8"]
-	path = bundle/pep8
-	url = https://github.com/vim-scripts/pep8.git
-[submodule "bundle/conque"]
-	path = bundle/conque
-	url = https://github.com/vim-scripts/Conque-Shell.git
-[submodule "bundle/omnicomplete"]
-	path = bundle/omnicomplete
-	url = https://github.com/vim-scripts/pythoncomplete.git
-[submodule "bundle/vim-colors-solarized"]
-	path = bundle/vim-colors-solarized
+[submodule "bundle/solarized"]
+	path = bundle/solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
 [submodule "bundle/camelcasemotion"]
 	path = bundle/camelcasemotion
@@ -52,3 +31,12 @@
 [submodule "bundle/trailing-whitespace"]
 	path = bundle/trailing-whitespace
 	url = https://github.com/vim-scripts/trailing-whitespace.git
+[submodule "bundle/sparkup"]
+	path = bundle/sparkup
+	url = https://github.com/kogakure/vim-sparkup.git
+[submodule "bundle/pyflakes"]
+	path = bundle/pyflakes
+	url = https://github.com/vim-scripts/pyflakes.vim.git
+[submodule "bundle/nerdtree"]
+	path = bundle/nerdtree
+	url = https://github.com/vim-scripts/The-NERD-tree.git
