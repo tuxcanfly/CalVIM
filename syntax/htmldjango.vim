@@ -32,3 +32,10 @@ syn region djangoComment start="{%\s*comment\s*%}" end="{%\s*endcomment\s*%}" co
 syn region djangoComBlock start="{#" end="#}" contains=djangoTodo containedin=ALLBUT,@djangoBlocks
 
 let b:current_syntax = "htmldjango"
+
+
+" new html 5 tags
+syn keyword htmlTagName contained article aside audio canvas command datalist
+syn keyword htmlTagName contained details embed figcaption figure footer header
+syn keyword htmlTagName contained hgroup keygen mark meter nav output progress
+syn keyword htmlTagName contained rp rt ruby section source summary time video
