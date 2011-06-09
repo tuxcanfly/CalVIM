@@ -40,8 +40,9 @@ map <Leader>e <C-e>
 " toggle NERDTree
 map <F4> :NERDTreeToggle<CR>
 
-"toggle Taglist
-map <F3> :TlistToggle<CR>
+"toggle TagBar
+nnoremap <silent> <F3> :TagbarToggle<CR>
+
 
 " toggle fugitive status
 map <silent><leader>s :Gstatus<CR>
