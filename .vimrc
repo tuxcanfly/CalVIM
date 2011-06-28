@@ -29,31 +29,16 @@ set noswapfile
 set pastetoggle=<F2>
 set nocompatible
 
-"set makeprg=python\ manage.py\ validate " django stuff
-
-set cmdheight=2 " silent shell prompts
-
-" nerdtree commentor
-map <Leader>c ,c
-map <Leader>e <C-e>
-
 " toggle NERDTree
 map <F4> :NERDTreeToggle<CR>
 
 "toggle TagBar
 nnoremap <silent> <F3> :TagbarToggle<CR>
 
-
 " toggle fugitive status
 map <silent><leader>s :Gstatus<CR>
 " toggle fugitive diff
 map <silent><leader>d :Gdiff<CR>
-
-" change escpae
-:inoremap <C-leader> <Esc>
-
-" ignore python cruft
-set wildignore=*.py[co]
 
 " insert newline but dont enter insert mode
 map <silent><leader><Enter> o<Esc>k
@@ -64,7 +49,7 @@ map <silent><A-left> :tabprevious<CR>
 map <silent><A-x> :tabclose<CR>
 
 " clear search highlight
-nnoremap <leader><space> :noh<cr>
+nnoremap <leader><space> :noh<CR>
 
 " clipboard
 set clipboard="+
@@ -72,25 +57,13 @@ set clipboard="+
 " shortcuts
 nnoremap ; :
 
-" vimango
-"let vimango_app_prefix = 'apps/'
-let vimango_template_prefix = 'templates/'
-
 :set hidden
-
-let Tlist_Close_On_Select = 1
-let Tlist_Use_Right_Window = 1
-
 " clear ^M messup
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
-"set gfn=Inconsolata\ Medium\ 13
-"set gfn=Monaco\ 11
 set gfn=Droid\ Sans\ Mono\ 12
-if has("gui_running")
-    set background=light
-    colorscheme ir_black
-endif
+set background=light
+colorscheme ir_black
 
 set tags+=/home/tuxcanfly/.tags/django13.tags
 set path+=new_templates,templates,apps
@@ -103,27 +76,15 @@ let g:closetag_default_xml=1
 map <Leader>t :tabnew<CR>
 set includeexpr=substitute(v:fname,'\\.','/','g')
 set suffixesadd=.py
-"nnoremap <C-]> <Esc>:exe "ptjump " . expand("<cword>")<Esc>
 
-" Visually select the text that was last edited/pasted
-"nmap gV `[v`]
-
-" Visual indent after paste
-"nnoremap gp "+gP`[V`]=
-"nnoremap p p`[V`]=
 let g:sparkupNextMapping = '<c-h>'
 
-"noremap^M<Up><Up><Down><Down><Left><Right><Left><Right>ba :botright !figlet "Vim    FTW"<CR>
 map <leader>gp :%vimgrep <cword> **/*.py<CR>
 map <leader>gh :%vimgrep <cword> **/*.html<CR>
 
-" Conque shell
-map <leader>e :ConqueTermSplit ipython manage.py shell<CR>
-map <F6> :ConqueTermSplit bash<CR>
-
-" prevent cursor jumping in v-mode
-vnoremap <S-Up> <Up>
-vnoremap <S-Down> <Down>
+" prevent cursor jumping
+noremap <S-Up> <Up>
+noremap <S-Down> <Down>
 
 " remove trailing whitespace
 map <leader>w :FixWhitespace<CR>
@@ -142,20 +103,6 @@ cmap <F8> <C-r><C-o>z
 "copy register
 autocmd FocusGained * let @z=@+
 
-" this causes problems with taglist
-"autocmd FileType python set ft=python.django
-"autocmd FileType html set ft=htmldjango.html
-
-" quicker trans tags around selection
-let g:surround_{char2nr("t")} = "{% trans \"\r\" %}"
-let g:surround_{char2nr("l")} = "login_required(\r)"
-let g:surround_{char2nr("d")} = "{{ \r }}"
-nmap <F11> viwSt
-nmap <F12> vitSt
-
-" use omnicompletion
-set omnifunc=pythoncomplete#Complete
-
 " stealing tpope's statusline
 set statusline=[%n]%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 set laststatus=2
@@ -166,17 +113,7 @@ endfunction
 
 nmap <F5> :Gentags<CR>
 
-nmap K i<cr><esc>k$
-
 nmap <leader>fp :Git push origin master<CR>
 nmap <leader>fm :Git pull origin master<CR>
 
-" django virtualenv
-if filereadable($VIRTUAL_ENV . '/.vimrc')
-    source $VIRTUAL_ENV/.vimrc
-endif
-
-let ropevim_guess_project=1
-
-nmap <leader>i :RopeAutoImport<CR>
 set path+=surveys/templates,accounts/templates
