@@ -25,9 +25,6 @@
 [submodule "bundle/matchit"]
 	path = bundle/matchit
 	url = https://github.com/vim-scripts/matchit.zip.git
-[submodule "bundle/trailing-whitespace"]
-	path = bundle/trailing-whitespace
-	url = https://github.com/vim-scripts/trailing-whitespace.git
 [submodule "bundle/sparkup"]
 	path = bundle/sparkup
 	url = https://github.com/kogakure/vim-sparkup.git

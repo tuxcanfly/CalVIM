@@ -164,7 +164,7 @@ function! s:Gentags()
     :! find -name \*.py -print | xargs ptags.py
 endfunction
 
-command! -nargs=0 Gentags call s:Gentags()
+nmap <F5> :Gentags<CR>
 
 nmap K i<cr><esc>k$
 
