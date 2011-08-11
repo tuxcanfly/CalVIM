@@ -61,9 +61,9 @@ nnoremap ; :
 " clear ^M messup
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
-set gfn=Droid\ Sans\ Mono\ 12
+set gfn=Inconsolata\ Medium\ 14
 set background=light
-colorscheme ir_black
+colorscheme molokai
 
 set tags+=/home/tuxcanfly/.tags/django13.tags
 set path+=new_templates,templates,apps
