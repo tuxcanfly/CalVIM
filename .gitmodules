@@ -40,3 +40,6 @@
 [submodule "bundle/whitespace"]
 	path = bundle/whitespace
 	url = https://github.com/vim-scripts/trailing-whitespace.git
+[submodule "bundle/nerdcommenter"]
+	path = bundle/nerdcommenter
+	url = https://github.com/scrooloose/nerdcommenter.git
