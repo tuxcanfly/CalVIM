@@ -37,3 +37,6 @@
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
 	url = https://github.com/majutsushi/tagbar.git
+[submodule "bundle/whitespace"]
+	path = bundle/whitespace
+	url = https://github.com/vim-scripts/trailing-whitespace.git
