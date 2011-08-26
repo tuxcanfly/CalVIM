@@ -4,8 +4,6 @@ call pathogen#runtime_append_all_bundles()
 filetype plugin on
 filetype plugin indent on
 
-colorscheme elflord
-
 set noic
 set softtabstop=4
 set expandtab
@@ -65,12 +63,12 @@ nnoremap ; :
 " clear ^M messup
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
-set gfn=Inconsolata\ Medium\ 14
+set gfn=Mensch\ 14
 set background=light
-colorscheme molokai
+colorscheme synic
 
-set tags+=/home/tuxcanfly/.tags/django13.tags
-set path+=new_templates,templates,apps
+set tags+=~/.tags/django13.tags
+set path+=templates
 let g:closetag_default_xml=1
 
 " open gf in new tab
@@ -119,5 +117,3 @@ nmap <F5> :Gentags<CR>
 
 nmap <leader>fp :Git push<CR>
 nmap <leader>fm :Git pull<CR>
-
-set path+=surveys/templates,accounts/templates
