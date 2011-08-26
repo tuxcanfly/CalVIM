@@ -63,7 +63,7 @@ nnoremap ; :
 " clear ^M messup
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
-set gfn=Mensch\ 14
+set gfn=Mensch\ 13
 set background=light
 colorscheme synic
 
