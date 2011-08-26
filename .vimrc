@@ -113,7 +113,9 @@ function! s:Gentags()
     :! find -name \*.py -print | xargs ptags.py
 endfunction
 
+command! -nargs=0 Gentags call s:Gentags()
 nmap <F5> :Gentags<CR>
+
 
 nmap <leader>fp :Git push<CR>
 nmap <leader>fm :Git pull<CR>
