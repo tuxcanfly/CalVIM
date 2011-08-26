@@ -32,6 +32,10 @@ set nocompatible
 " toggle NERDTree
 map <F4> :NERDTreeToggle<CR>
 
+" ignore python cruft
+let NERDTreeIgnore=['\.pyc']
+set wildignore=*.py[co]
+
 "toggle TagBar
 nnoremap <silent> <F3> :TagbarToggle<CR>
 
