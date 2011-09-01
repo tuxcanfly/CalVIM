@@ -81,8 +81,8 @@ set suffixesadd=.py
 
 let g:sparkupNextMapping = '<c-h>'
 
-map <leader>gp :%vimgrep <cword> **/*.py<CR>
-map <leader>gh :%vimgrep <cword> **/*.html<CR>
+map <leader>gp :%vimgrep <cword> **/*.py
+map <leader>gh :%vimgrep <cword> **/*.html
 
 " prevent cursor jumping
 noremap <S-Up> <Up>
