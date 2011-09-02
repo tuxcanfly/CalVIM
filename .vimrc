@@ -119,3 +119,6 @@ nmap <F5> :Gentags<CR>
 
 nmap <leader>fp :Git push<CR>
 nmap <leader>fm :Git pull<CR>
+
+let g:pep8_map='<F6>'
+let g:pyflakes_use_quickfix=0
