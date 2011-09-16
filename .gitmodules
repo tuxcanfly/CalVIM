@@ -55,3 +55,6 @@
 [submodule "bundle/screen"]
 	path = bundle/screen
 	url = https://github.com/ervandew/screen.git
+[submodule "bundle/xoria"]
+	path = bundle/xoria
+	url = https://github.com/vim-scripts/xoria256.vim.git

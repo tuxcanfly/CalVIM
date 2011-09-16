@@ -67,7 +67,7 @@ noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
 set gfn=Mensch\ 13
 set background=light
-colorscheme darkburn
+colorscheme xoria256
 
 set tags+=~/.tags/django13.tags
 set path+=templates
