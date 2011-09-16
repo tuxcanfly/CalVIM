@@ -1,6 +1,8 @@
 " bundles
 call pathogen#runtime_append_all_bundles()
 
+set t_Co=256
+
 filetype plugin on
 filetype plugin indent on
 
@@ -65,7 +67,7 @@ noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
 set gfn=Mensch\ 13
 set background=light
-colorscheme synic
+colorscheme darkburn
 
 set tags+=~/.tags/django13.tags
 set path+=templates
