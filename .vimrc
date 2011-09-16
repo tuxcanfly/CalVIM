@@ -122,3 +122,5 @@ nmap <leader>fm :Git pull<CR>
 
 let g:pep8_map='<F6>'
 let g:pyflakes_use_quickfix=0
+let g:ctrlp_working_path_mode = 0
+
