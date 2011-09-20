@@ -48,8 +48,8 @@ map <silent><leader>d :Gdiff<CR>
 map <silent><leader><Enter> o<Esc>k
 
 " tabbing
-map <silent><A-right> :tabnext<CR>
-map <silent><A-left> :tabprevious<CR>
+map <silent><S-right> :tabnext<CR>
+map <silent><S-left> :tabprevious<CR>
 map <silent><A-x> :tabclose<CR>
 
 " clear search highlight
@@ -126,3 +126,7 @@ let g:pep8_map='<F6>'
 let g:pyflakes_use_quickfix=0
 let g:ctrlp_working_path_mode = 0
 
+" screen
+nmap <F11> :ScreenShell<CR>
+nmap <F12> :ScreenQuit<CR>
+vmap <F7>  :ScreenSend<CR>
