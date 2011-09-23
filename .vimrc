@@ -130,3 +130,6 @@ let g:ctrlp_working_path_mode = 0
 nmap <F11> :ScreenShell<CR>
 nmap <F12> :ScreenQuit<CR>
 vmap <F7>  :ScreenSend<CR>
+
+" PyFlakes error highlight
+hi SpellBad     ctermfg=160 guifg=fg      ctermbg=bg                cterm=underline               guisp=#df0000
