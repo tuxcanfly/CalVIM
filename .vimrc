@@ -133,3 +133,14 @@ vmap <F7>  :ScreenSend<CR>
 
 " PyFlakes error highlight
 hi SpellBad     ctermfg=160 guifg=fg      ctermbg=bg                cterm=underline               guisp=#df0000
+
+" Tips from /r/vim
+
+" sudo make me a sandwich
+cmap w!! %!sudo tee > /dev/null %
+
+" move between splits
+noremap <C-h> <C-w>h
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
+noremap <C-l> <C-w>l
