@@ -132,7 +132,7 @@ nmap <F12> :ScreenQuit<CR>
 vmap <F7>  :ScreenSend<CR>
 
 " PyFlakes error highlight
-hi SpellBad     ctermfg=160 guifg=fg      ctermbg=bg                cterm=underline               guisp=#df0000
+hi SpellBad ctermfg=160 guifg=fg cterm=underline guisp=#df0000
 
 " Tips from /r/vim
 
