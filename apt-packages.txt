@@ -1,1 +1,4 @@
-screen pep8 pyflakes
+screen
+pep8
+pyflakes
+ctags
