@@ -47,6 +47,7 @@ let g:closetag_default_xml=1
 let g:sparkupNextMapping = '<c-h>'
 let g:pep8_map='<F6>'
 let g:pyflakes_use_quickfix=0
+let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
 
 colorscheme herald
@@ -76,8 +77,9 @@ map <silent><S-left> :tabprevious<CR>
 map <silent><A-x> :tabclose<CR>
 "new tab
 map <Leader>t :tabnew<CR>
-map <leader>gp :%vimgrep <cword> **/*.py
-map <leader>gh :%vimgrep <cword> **/*.html
+" Project search
+map <leader>gp :Ack <cword> **/*.py
+map <leader>gh :Ack <cword> **/*.html
 " remove trailing whitespace
 map <leader>w :FixWhitespace<CR>
 
