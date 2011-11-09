@@ -50,7 +50,7 @@ let g:pyflakes_use_quickfix=0
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
 
-colorscheme herald
+colorscheme xoria256
 function! s:Gentags()
     :! find -name \*.py -print | xargs ptags.py
 endfunction
@@ -72,8 +72,8 @@ map <silent><leader>d :Gdiff<CR>
 " insert newline but dont enter insert mode
 map <silent><leader><Enter> o<Esc>k
 " tabbing
-map <silent><S-right> :tabnext<CR>
-map <silent><S-left> :tabprevious<CR>
+map <silent>K :tabnext<CR>
+map <silent>J :tabprevious<CR>
 map <silent><A-x> :tabclose<CR>
 "new tab
 map <Leader>t :tabnew<CR>
