@@ -30,7 +30,7 @@ set pastetoggle=<F2>
 set nocompatible
 set t_Co=256
 set wildignore=*.py[co]
-set clipboard="+
+set clipboard=unnamedplus
 set hidden
 set gfn=Mensch\ 13
 set background=light
