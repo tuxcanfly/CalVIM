@@ -60,6 +60,8 @@ command! -nargs=0 Gentags call s:Gentags()
 hi SpellBad ctermfg=160 guifg=fg cterm=underline guisp=#df0000
 
 
+autocmd FileType htmldjango set ft=htmldjango.html
+
 """ ---- Keybindings ----
 
 
@@ -96,6 +98,8 @@ nnoremap <leader><space> :noh<CR>
 nnoremap ; :
 " open gf in new tab
 nnoremap gf <C-W>gf
+" gundo
+nnoremap <F5> :GundoToggle<CR>
 
 
 " clear ^M messup
