@@ -78,8 +78,7 @@ map <silent><A-x> :tabclose<CR>
 "new tab
 map <Leader>t :tabnew<CR>
 " Project search
-map <leader>gp :Ack <cword> **/*.py
-map <leader>gh :Ack <cword> **/*.html
+map <leader>g :Ack <cword>
 " remove trailing whitespace
 map <leader>w :FixWhitespace<CR>
 
