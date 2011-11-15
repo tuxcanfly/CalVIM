@@ -99,7 +99,7 @@ nnoremap ; :
 " open gf in new tab
 nnoremap gf <C-W>gf
 " gundo
-nnoremap <F5> :GundoToggle<CR>
+nnoremap <F7> :GundoToggle<CR>
 
 
 " clear ^M messup
