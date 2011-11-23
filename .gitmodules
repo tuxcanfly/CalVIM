@@ -61,3 +61,6 @@
 [submodule "bundle/gundo"]
 	path = bundle/gundo
 	url = https://github.com/sjl/gundo.vim.git
+[submodule "bundle/matchtag"]
+	path = bundle/matchtag
+	url = https://github.com/gregsexton/MatchTag.git
