@@ -1,4 +1,3 @@
-" bundles
 call pathogen#infect()
 
 
@@ -8,46 +7,48 @@ filetype plugin indent on
 
 """ ---- Settings ----
 
-set noic
-set softtabstop=4
+set autoindent                                              " always set autoindenting on
+set autoread
+set copyindent                                              " copy the previous indentation on autoindenting
 set expandtab
-set nowrap        " don't wrap lines
-set tabstop=4     " a tab is four spaces
-set backspace=indent,eol,start " allow backspacing over everything in insert mode
-set autoindent    " always set autoindenting on
-set copyindent    " copy the previous indentation on autoindenting
-set number        " always show line numbers
-set shiftwidth=4  " number of spaces to use for autoindenting
-set shiftround    " use multiple of shiftwidth when indenting with '<' and '>'
-set showmatch     " set show matching parenthesis
-set ignorecase    " ignore case when searching
-set smartcase     " ignore case if search pattern is all lowercase, case-sensitive otherwise
-set hlsearch      " highlight search terms
-set incsearch     " show search matches as you type
-set nobackup
-set noswapfile
-set pastetoggle=<F2>
-set nocompatible
-set t_Co=256
-set wildignore=*.py[co]
-set clipboard=unnamedplus
 set hidden
-set gfn=Mensch\ 13
-set background=light
-set tags+=~/.tags/django13.tags
-set path+=templates
-set includeexpr=substitute(v:fname,'\\.','/','g')
-set suffixesadd=.py
-set statusline=[%n]%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
-set laststatus=2
+set hlsearch                                                " highlight search terms
+set ignorecase                                              " ignore case when searching
+set incsearch                                               " show search matches as you type
+set number                                                  " always show line numbers
+set shiftround                                              " use multiple of shiftwidth when indenting with '<' and '>'
+set showmatch                                               " set show matching parenthesis
+set smartcase                                               " ignore case if search pattern is all lowercase, case-sensitive otherwise
+set nobackup
+set nocompatible
+set noic
+set noswapfile
+set nowrap                                                  " don't wrap lines
+set softtabstop     =4
+set tabstop         =4                                      " a tab is four spaces
+set backspace       =indent,eol,start                       " allow backspacing over everything in insert mode
+set shiftwidth      =4                                      " number of spaces to use for autoindenting
+set pastetoggle     =<F2>
+set t_Co            =256
+set wildignore      =*.py[co]
+set clipboard       =unnamedplus
+set gfn             =Mensch
+set background      =light
+set tags            +=~/.tags/django13.tags
+set path            +=templates
+set includeexpr     =substitute(v:fname,'\\.','/','g')
+set suffixesadd     =.py
+set statusline      =[%n]%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+set laststatus      =2
 
 
-let NERDTreeIgnore=['\.pyc']
-let g:closetag_default_xml=1
-let g:sparkupNextMapping = '<c-h>'
-let g:pep8_map='<F6>'
-let g:pyflakes_use_quickfix=0
-let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+let NERDTreeIgnore              =['\.pyc']
+let g:closetag_default_xml      =1
+let g:sparkupNextMapping        ='<c-h>'
+let g:pep8_map                  ='<F6>'
+let g:pyflakes_use_quickfix     =0
+let g:ackprg                    ="ack-grep -H --nocolor --nogroup --column"
+let g:surround_{char2nr("r")}   ="_(u\r)"
 
 
 colorscheme xoria256
@@ -56,14 +57,11 @@ function! s:Gentags()
 endfunction
 command! -nargs=0 Gentags call s:Gentags()
 
-" PyFlakes error highlight
-hi SpellBad ctermfg=160 guifg=fg cterm=underline guisp=#df0000
-
 
 autocmd FileType htmldjango set ft=htmldjango.html
+au! BufRead,BufNewFile *.json set filetype=json
 
 """ ---- Keybindings ----
-
 
 " toggle NERDTree
 map <F4> :NERDTreeToggle<CR>
@@ -77,7 +75,7 @@ map <silent><leader><Enter> o<Esc>k
 map <silent>K :tabnext<CR>
 map <silent>J :tabprevious<CR>
 map <silent><A-x> :tabclose<CR>
-"new tab
+" new tab
 map <Leader>t :tabnew<CR>
 " Project search
 map <leader>g :Ack <cword>
