@@ -32,7 +32,7 @@ set pastetoggle     =<F2>
 set t_Co            =256
 set wildignore      =*.py[co]
 set clipboard       =unnamedplus
-set gfn             =Mensch
+set gfn             =Consolas
 set background      =light
 set tags            +=~/.tags/django13.tags
 set path            +=templates
@@ -49,6 +49,7 @@ let g:pep8_map                  ='<F6>'
 let g:pyflakes_use_quickfix     =0
 let g:ackprg                    ="ack-grep -H --nocolor --nogroup --column"
 let g:surround_{char2nr("r")}   ="_(u\r)"
+let g:virtualenv_directory      =".virtualenvs2.7/"
 
 
 colorscheme xoria256
