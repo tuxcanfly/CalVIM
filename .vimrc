@@ -54,7 +54,7 @@ let g:virtualenv_directory      =".virtualenvs2.7/"
 
 colorscheme xoria256
 function! s:Gentags()
-    :! ctags -R .
+    :! find . -name '*.py' | xargs ctags
 endfunction
 command! -nargs=0 Gentags call s:Gentags()
 
