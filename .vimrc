@@ -33,7 +33,7 @@ set t_Co            =256
 set wildignore      =*.py[co]
 set clipboard       =unnamedplus
 set gfn             =Consolas
-set background      =light
+set background      =dark
 set tags            +=~/.tags/django13.tags
 set path            +=templates
 set includeexpr     =substitute(v:fname,'\\.','/','g')
@@ -52,7 +52,7 @@ let g:surround_{char2nr("r")}   ="_(u\r)"
 let g:virtualenv_directory      =".virtualenvs2.7/"
 
 
-colorscheme xoria256
+colorscheme hemisu
 function! s:Gentags()
     :! find . -name '*.py' | xargs ctags
 endfunction
