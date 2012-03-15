@@ -31,8 +31,9 @@ set shiftwidth      =4                                      " number of spaces t
 set pastetoggle     =<F2>
 set t_Co            =256
 set wildignore      =*.py[co]
+set wildmode        =list:longest,list:full
 set clipboard       =unnamedplus
-set gfn             =Consolas
+set gfn             =Consolas\ 11
 set background      =dark
 set tags            +=~/.tags/django13.tags
 set path            +=templates
@@ -50,6 +51,7 @@ let g:pyflakes_use_quickfix     =0
 let g:ackprg                    ="ack-grep -H --nocolor --nogroup --column"
 let g:surround_{char2nr("r")}   ="_(u\r)"
 let g:virtualenv_directory      =".virtualenvs2.7/"
+let g:Powerline_symbols         ="fancy"
 
 
 colorscheme hemisu
@@ -59,8 +61,8 @@ endfunction
 command! -nargs=0 Gentags call s:Gentags()
 
 
-autocmd FileType htmldjango set ft=htmldjango.html
-au! BufRead,BufNewFile *.json set filetype=json
+autocmd     FileType            htmldjango  set         ft          =htmldjango.html
+autocmd     BufRead,BufNewFile  *.json      set         filetype    =json
 
 """ ---- Keybindings ----
 
@@ -111,6 +113,10 @@ noremap <C-h> <C-w>h
 noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
+
+
+" allow the . to execute once for each line of a visual selection
+vnoremap . :normal .<CR>
 
 
 " screen
