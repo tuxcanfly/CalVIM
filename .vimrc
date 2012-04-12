@@ -33,7 +33,7 @@ set t_Co            =256
 set wildignore      =*.py[co]
 set wildmode        =list:longest,list:full
 set clipboard       =unnamedplus
-set gfn             =Consolas\ 11
+set gfn             =Monaco\ 10
 set background      =dark
 set tags            +=~/.tags/django13.tags
 set path            +=templates
@@ -41,19 +41,20 @@ set includeexpr     =substitute(v:fname,'\\.','/','g')
 set suffixesadd     =.py
 set statusline      =[%n]%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 set laststatus      =2
+set completeopt     =
 
 
-let NERDTreeIgnore                  =['\.pyc']
-let g:closetag_default_xml          =1
-let g:sparkupNextMapping            ='<c-h>'
-let g:pep8_map                      ='<F6>'
-let g:pyflakes_use_quickfix         =0
-let g:ackprg                        ="ack-grep -H --nocolor --nogroup --column"
-let g:surround_{char2nr("r")}       ="_(u\r)"
-let g:virtualenv_directory          =".virtualenvs2.7/"
-let g:Powerline_symbols             ="fancy"
-let g:UltiSnipsSnippetDirectories   =["UltiSnips", "snippets"]
-
+let NERDTreeIgnore                      =['\.pyc']
+let g:closetag_default_xml              =1
+let g:sparkupNextMapping                ='<c-h>'
+let g:pep8_map                          ='<F6>'
+let g:pyflakes_use_quickfix             =0
+let g:ackprg                            ="ack-grep -H --nocolor --nogroup --column"
+let g:surround_{char2nr("r")}           ="_(u\r)"
+let g:virtualenv_directory              ="/home/tuxcanfly/.virtualenvs2.7/"
+let g:Powerline_symbols                 ="fancy"
+let g:UltiSnipsSnippetDirectories       =["UltiSnips", "snippets"]
+let g:neocomplcache_enable_at_startup   =1
 
 colorscheme hemisu
 function! s:Gentags()
@@ -76,39 +77,39 @@ map <silent><leader>d :Gdiff<CR>
 " insert newline but dont enter insert mode
 map <silent><leader><Enter> o<Esc>k
 " tabbing
-map <silent>K :tabnext<CR>
-map <silent>J :tabprevious<CR>
-map <silent><A-x> :tabclose<CR>
+map <silent>K       :tabnext<CR>
+map <silent>J       :tabprevious<CR>
+map <silent><A-x>   :tabclose<CR>
 " new tab
 map <Leader>t :tabnew<CR>
 " Project search
-map <leader>g :Ack <cword>
+map <leader>g   :Ack <cword>
+map <leader>gp  :Ack --py<cword>
+map <leader>gh  :Ack --html<cword>
+map <leader>gj  :Ack --js<cword>
+map <leader>gc  :Ack --css<cword>
 " remove trailing whitespace
 map <leader>w :FixWhitespace<CR>
 
 
-nmap <F5> :Gentags<CR>
+nmap <F5>       :Gentags<CR>
 nmap <leader>fp :Git push<CR>
 nmap <leader>fm :Git pull<CR>
 
 
-"toggle TagBar
-nnoremap <silent> <F3> :TagbarToggle<CR>
 " clear search highlight
 nnoremap <leader><space> :noh<CR>
 " shortcuts
 nnoremap ; :
 " open gf in new tab
 nnoremap gf <C-W>gf
-" gundo
-nnoremap <F7> :GundoToggle<CR>
 
 
 " clear ^M messup
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 " prevent cursor jumping
-noremap <S-Up> <Up>
-noremap <S-Down> <Down>
+noremap <S-Up>      <Up>
+noremap <S-Down>    <Down>
 " move between splits
 noremap <C-h> <C-w>h
 noremap <C-j> <C-w>j
@@ -118,15 +119,3 @@ noremap <C-l> <C-w>l
 
 " allow the . to execute once for each line of a visual selection
 vnoremap . :normal .<CR>
-
-
-" screen
-nmap <F11> :ScreenShell<CR>
-nmap <F12> :ScreenQuit<CR>
-
-
-vmap <F7>  :ScreenSend<CR>
-
-
-" sudo make me a sandwich
-cmap w!! %!sudo tee > /dev/null %
