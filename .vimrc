@@ -41,7 +41,7 @@ set includeexpr     =substitute(v:fname,'\\.','/','g')
 set suffixesadd     =.py
 set statusline      =[%n]%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 set laststatus      =2
-set completeopt     =
+set completeopt     =menu
 
 
 let NERDTreeIgnore                      =['\.pyc']
