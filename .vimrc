@@ -33,7 +33,7 @@ set t_Co            =256
 set wildignore      =*.py[co]
 set wildmode        =list:longest,list:full
 set clipboard       =unnamedplus
-set gfn             =Monaco\ 10
+set gfn             =Consolas\ 12
 set background      =dark
 set tags            +=~/.tags/django13.tags
 set path            +=templates
@@ -56,7 +56,7 @@ let g:Powerline_symbols                 ="fancy"
 let g:UltiSnipsSnippetDirectories       =["UltiSnips", "snippets"]
 let g:neocomplcache_enable_at_startup   =1
 
-colorscheme hemisu
+colorscheme xoria256
 function! s:Gentags()
     :! find . -name '*.py' | xargs ctags
 endfunction

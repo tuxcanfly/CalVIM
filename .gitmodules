@@ -49,9 +49,6 @@
 [submodule "bundle/ack"]
 	path = bundle/ack
 	url = https://github.com/mileszs/ack.vim.git
-[submodule "bundle/matchtag"]
-	path = bundle/matchtag
-	url = https://github.com/gregsexton/MatchTag.git
 [submodule "bundle/json"]
 	path = bundle/json
 	url = https://github.com/leshill/vim-json.git
