@@ -84,10 +84,10 @@ map <silent><A-x>   :tabclose<CR>
 map <Leader>t :tabnew<CR>
 " Project search
 map <leader>g   :Ack <cword>
-map <leader>gp  :Ack --py<cword>
-map <leader>gh  :Ack --html<cword>
-map <leader>gj  :Ack --js<cword>
-map <leader>gc  :Ack --css<cword>
+map <leader>gp  :Ack --py <cword>
+map <leader>gh  :Ack --html <cword>
+map <leader>gj  :Ack --js <cword>
+map <leader>gc  :Ack --css <cword>
 " remove trailing whitespace
 map <leader>w :FixWhitespace<CR>
 
