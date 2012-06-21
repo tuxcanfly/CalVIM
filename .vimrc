@@ -65,6 +65,8 @@ command! -nargs=0 Gentags call s:Gentags()
 
 autocmd     FileType            htmldjango  set         ft          =htmldjango.html
 autocmd     BufRead,BufNewFile  *.json      set         filetype    =json
+autocmd     FileType            coffee      setlocal    ts          =2  sts=2   sw=2    et
+autocmd     FileType            jade        setlocal    ts          =2  sts=2   sw=2    et
 
 """ ---- Keybindings ----
 
