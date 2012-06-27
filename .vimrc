@@ -33,7 +33,7 @@ set t_Co            =256
 set wildignore      =*.py[co]
 set wildmode        =list:longest,list:full
 set clipboard       =unnamedplus
-set gfn             =DejaVu\ Sans\ Mono\ for\ Powerline\ 12
+set gfn             =Mensch\ for\ Powerline\ 11
 set background      =dark
 set tags            +=~/.tags/django13.tags
 set path            +=templates
@@ -56,7 +56,7 @@ let g:Powerline_symbols                 ="fancy"
 let g:UltiSnipsSnippetDirectories       =["UltiSnips", "snippets"]
 let g:neocomplcache_enable_at_startup   =1
 
-colorscheme xoria256
+colorscheme hemisu
 function! s:Gentags()
     :! find . -name '*.py' | xargs ctags
 endfunction
