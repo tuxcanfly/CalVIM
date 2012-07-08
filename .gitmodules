@@ -49,9 +49,6 @@
 [submodule "bundle/ack"]
 	path = bundle/ack
 	url = https://github.com/mileszs/ack.vim.git
-[submodule "bundle/json"]
-	path = bundle/json
-	url = https://github.com/leshill/vim-json.git
 [submodule "bundle/virtualenv"]
 	path = bundle/virtualenv
 	url = https://github.com/jmcantrell/vim-virtualenv.git
@@ -67,3 +64,6 @@
 [submodule "bundle/coffeescript"]
 	path = bundle/coffeescript
 	url = https://github.com/kchmck/vim-coffee-script.git
+[submodule "bundle/json"]
+	path = bundle/json
+	url = git://github.com/tuxcanfly/vim-json.git
