@@ -120,7 +120,3 @@ noremap <C-l> <C-w>l
 
 " allow the . to execute once for each line of a visual selection
 vnoremap . :normal .<CR>
-
-
-" don't yank after paste
-xnoremap <expr> p v:register=='"'?'pbvey':'p
