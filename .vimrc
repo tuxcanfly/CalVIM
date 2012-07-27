@@ -96,6 +96,7 @@ map <leader>w :FixWhitespace<CR>
 nmap <F5>       :Gentags<CR>
 nmap <leader>fp :Git push<CR>
 nmap <leader>fm :Git pull<CR>
+nmap <C-s>      :wa<CR>
 
 
 " clear search highlight
