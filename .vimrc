@@ -80,7 +80,6 @@ map <silent><leader><Enter> o<Esc>k
 " tabbing
 map <silent>K       :tabnext<CR>
 map <silent>J       :tabprevious<CR>
-map <silent><A-x>   :tabclose<CR>
 " new tab
 map <Leader>t :tabnew<CR>
 " Project search
@@ -96,7 +95,9 @@ map <leader>w :FixWhitespace<CR>
 nmap <F5>       :Gentags<CR>
 nmap <leader>fp :Git push<CR>
 nmap <leader>fm :Git pull<CR>
-nmap <C-s>      :wa<CR>
+nmap <leader>fc :Gread<CR>
+nmap <C-s>      :w<CR>
+nmap <C-x>      :x<CR>
 
 
 " clear search highlight
