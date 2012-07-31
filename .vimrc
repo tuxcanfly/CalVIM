@@ -56,7 +56,7 @@ let g:Powerline_symbols                 ="fancy"
 let g:UltiSnipsSnippetDirectories       =["UltiSnips", "snippets"]
 let g:neocomplcache_enable_at_startup   =1
 
-colorscheme hemisu
+colorscheme lucius
 function! s:Gentags()
     :! find . -name '*.py' | xargs ctags
 endfunction
