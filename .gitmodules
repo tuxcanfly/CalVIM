@@ -67,3 +67,6 @@
 [submodule "bundle/json"]
 	path = bundle/json
 	url = git://github.com/tuxcanfly/vim-json.git
+[submodule "bundle/tagbar"]
+	path = bundle/tagbar
+	url = https://github.com/majutsushi/tagbar.git

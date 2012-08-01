@@ -93,6 +93,7 @@ map <leader>w :FixWhitespace<CR>
 
 
 nmap <F5>       :Gentags<CR>
+nmap <F3>       :TagbarToggle<CR>
 nmap <leader>fp :Git push<CR>
 nmap <leader>fm :Git pull<CR>
 nmap <leader>fc :Gread<CR>
