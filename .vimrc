@@ -1,6 +1,3 @@
-call pathogen#infect()
-
-
 filetype plugin on
 filetype plugin indent on
 
@@ -42,7 +39,9 @@ set suffixesadd     =.py
 set statusline      =[%n]%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 set laststatus      =2
 set completeopt     =menu
+set rtp             +=~/.vim/bundle/vundle/
 
+call vundle#rc()
 
 let NERDTreeIgnore                      =['\.pyc']
 let g:closetag_default_xml              =1
@@ -66,6 +65,34 @@ command! -nargs=0 Gentags call s:Gentags()
 autocmd     FileType            html        set         ft          =htmldjango
 autocmd     FileType            coffee      setlocal    ts          =2  sts=2   sw=2    et
 autocmd     FileType            jade        setlocal    ts          =2  sts=2   sw=2    et
+
+""" ---- Bundles ------
+
+Bundle 'gmarik/vundle'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-ragtag'
+Bundle 'tpope/vim-unimpaired'
+Bundle 'bkad/CamelCaseMotion'
+Bundle 'matchit.zip'
+Bundle 'kogakure/vim-sparkup'
+Bundle 'vim-scripts/The-NERD-tree'
+Bundle 'vim-scripts/trailing-whitespace'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'vim-scripts/UltiSnips'
+Bundle 'vim-scripts/pep8'
+Bundle 'html5.vim'
+Bundle 'michaeljsmith/vim-indent-object'
+Bundle 'argtextobj.vim'
+Bundle 'ack.vim'
+Bundle 'jmcantrell/vim-virtualenv'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'Shougo/neocomplcache'
+Bundle 'digitaltoad/vim-jade'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'tuxcanfly/vim-json'
+Bundle 'majutsushi/tagbar'
+Bundle 'scrooloose/syntastic'
 
 """ ---- Keybindings ----
 
