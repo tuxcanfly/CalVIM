@@ -47,13 +47,15 @@ let NERDTreeIgnore                      =['\.pyc']
 let g:closetag_default_xml              =1
 let g:sparkupNextMapping                ='<c-h>'
 let g:pep8_map                          ='<F6>'
-let g:pyflakes_use_quickfix             =0
 let g:ackprg                            ="ack-grep -H --nocolor --nogroup --column"
 let g:surround_{char2nr("r")}           ="_(u\r)"
 let g:virtualenv_directory              ="/home/tuxcanfly/.virtualenvs2.7/"
 let g:Powerline_symbols                 ="fancy"
 let g:UltiSnipsSnippetDirectories       =["UltiSnips", "snippets"]
 let g:neocomplcache_enable_at_startup   =1
+let g:syntastic_check_on_open           =1
+let g:syntastic_error_symbol            ='✗'
+let g:syntastic_warning_symbol          ='⚠'
 
 colorscheme lucius
 function! s:Gentags()
