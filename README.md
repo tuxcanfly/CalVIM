@@ -1,8 +1,15 @@
-A django IDE using Vim
+# A django IDE using Vim
 
-This is a vim configuration customized for python/django/html/javascript editing.
+## Instructions
+    git clone git@github.com:patux/CalVIM.git ~/.vim
+    ln -s ~/.vim/.vimrc ~/.vimrc 
+    cd ~/.vim
+    git submodule init 
+    git submodule update
 
-Notable features include:
+## This is a vim configuration customized for python/django/html/javascript editing.
+
+### Notable features include:
 
 * Django/html snippets using snipmate. Eliminates a lot of boilerplate code.
 
