@@ -6,7 +6,9 @@
     $ cd ~/.vim
     $ git submodule init
     $ git submodule update
-    $ sudo apt-get install `cat apt-packages.txt`
+
+### Install extra packages (Optional)
+    $ sudo apt-get install `cat ~/.vim/apt-packages.txt`
 
 ## This is a vim configuration customized for python/django/html/javascript editing.
 
