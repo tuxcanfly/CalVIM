@@ -1,11 +1,12 @@
 # A django IDE using Vim
 
 ## Instructions
-    git clone git@github.com:patux/CalVIM.git ~/.vim
-    ln -s ~/.vim/.vimrc ~/.vimrc 
-    cd ~/.vim
-    git submodule init 
-    git submodule update
+    $ git clone git@github.com:patux/CalVIM.git ~/.vim
+    $ ln -s ~/.vim/.vimrc ~/.vimrc
+    $ cd ~/.vim
+    $ git submodule init
+    $ git submodule update
+    $ sudo apt-get install `cat apt-packages.txt`
 
 ## This is a vim configuration customized for python/django/html/javascript editing.
 
