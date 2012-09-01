@@ -1,68 +1,68 @@
-[submodule "bundle/fugitive"]
-	path = bundle/fugitive
+[submodule "bundle/vim-fugitive"]
+	path = bundle/vim-fugitive
 	url = http://github.com/tpope/vim-fugitive.git
-[submodule "bundle/surround"]
-	path = bundle/surround
+[submodule "bundle/vim-surround"]
+	path = bundle/vim-surround
 	url = http://github.com/tpope/vim-surround.git
-[submodule "bundle/ragtag"]
-	path = bundle/ragtag
+[submodule "bundle/vim-ragtag"]
+	path = bundle/vim-ragtag
 	url = https://github.com/tpope/vim-ragtag.git
-[submodule "bundle/unimpaired"]
-	path = bundle/unimpaired
+[submodule "bundle/vim-unimpaired"]
+	path = bundle/vim-unimpaired
 	url = https://github.com/tpope/vim-unimpaired.git
-[submodule "bundle/camelcasemotion"]
-	path = bundle/camelcasemotion
+[submodule "bundle/CamelCaseMotion"]
+	path = bundle/CamelCaseMotion
 	url = https://github.com/bkad/CamelCaseMotion.git
-[submodule "bundle/matchit"]
-	path = bundle/matchit
+[submodule "bundle/matchit.zip"]
+	path = bundle/matchit.zip
 	url = https://github.com/vim-scripts/matchit.zip.git
-[submodule "bundle/sparkup"]
-	path = bundle/sparkup
+[submodule "bundle/vim-sparkup"]
+	path = bundle/vim-sparkup
 	url = https://github.com/kogakure/vim-sparkup.git
-[submodule "bundle/nerdtree"]
-	path = bundle/nerdtree
+[submodule "bundle/The-NERD-tree"]
+	path = bundle/The-NERD-tree
 	url = https://github.com/vim-scripts/The-NERD-tree.git
-[submodule "bundle/whitespace"]
-	path = bundle/whitespace
+[submodule "bundle/trailing-whitespace"]
+	path = bundle/trailing-whitespace
 	url = https://github.com/vim-scripts/trailing-whitespace.git
 [submodule "bundle/nerdcommenter"]
 	path = bundle/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter.git
-[submodule "bundle/ultisnips"]
-	path = bundle/ultisnips
+[submodule "bundle/UltiSnips"]
+	path = bundle/UltiSnips
 	url = https://github.com/vim-scripts/UltiSnips.git
 [submodule "bundle/pep8"]
 	path = bundle/pep8
 	url = https://github.com/vim-scripts/pep8.git
-[submodule "bundle/html5"]
-	path = bundle/html5
+[submodule "bundle/html5.vim"]
+	path = bundle/html5.vim
 	url = https://github.com/othree/html5.vim.git
-[submodule "bundle/indent-object"]
-	path = bundle/indent-object
+[submodule "bundle/vim-indent-object"]
+	path = bundle/vim-indent-object
 	url = https://github.com/michaeljsmith/vim-indent-object.git
-[submodule "bundle/argtextobj"]
-	path = bundle/argtextobj
+[submodule "bundle/argtextobj.vim"]
+	path = bundle/argtextobj.vim
 	url = https://github.com/vim-scripts/argtextobj.vim.git
-[submodule "bundle/ack"]
-	path = bundle/ack
+[submodule "bundle/ack.vim"]
+	path = bundle/ack.vim
 	url = https://github.com/mileszs/ack.vim.git
-[submodule "bundle/virtualenv"]
-	path = bundle/virtualenv
+[submodule "bundle/vim-virtualenv"]
+	path = bundle/vim-virtualenv
 	url = https://github.com/jmcantrell/vim-virtualenv.git
-[submodule "bundle/powerline"]
-	path = bundle/powerline
+[submodule "bundle/vim-powerline"]
+	path = bundle/vim-powerline
 	url = https://github.com/Lokaltog/vim-powerline.git
-[submodule "bundle/neocomplete"]
-	path = bundle/neocomplete
+[submodule "bundle/neocomplcache"]
+	path = bundle/neocomplcache
 	url = https://github.com/Shougo/neocomplcache.git
-[submodule "bundle/jade"]
-	path = bundle/jade
+[submodule "bundle/vim-jade"]
+	path = bundle/vim-jade
 	url = https://github.com/digitaltoad/vim-jade.git
-[submodule "bundle/coffeescript"]
-	path = bundle/coffeescript
+[submodule "bundle/vim-coffee-script"]
+	path = bundle/vim-coffee-script
 	url = https://github.com/kchmck/vim-coffee-script.git
-[submodule "bundle/json"]
-	path = bundle/json
+[submodule "bundle/vim-json"]
+	path = bundle/vim-json
 	url = git://github.com/tuxcanfly/vim-json.git
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
