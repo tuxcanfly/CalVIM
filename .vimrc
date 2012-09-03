@@ -32,7 +32,7 @@ set wildmode        =list:longest,list:full
 set clipboard       =unnamedplus
 set gfn             =Consolas\ 12
 set background      =dark
-set tags            +=~/.tags/django13.tags
+set tags            +=~/.tags/tags
 set path            +=templates
 set includeexpr     =substitute(v:fname,'\\.','/','g')
 set suffixesadd     =.py
@@ -127,7 +127,7 @@ nmap <leader>fp :Git push<CR>
 nmap <leader>fm :Git pull<CR>
 nmap <leader>fc :Gread<CR>
 nmap <C-s>      :w<CR>
-nmap <C-x>      :x<CR>
+nmap <leader>x  :x<CR>
 
 
 " clear search highlight
