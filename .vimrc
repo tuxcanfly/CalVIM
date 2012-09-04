@@ -46,7 +46,6 @@ call vundle#rc()
 let NERDTreeIgnore                      =['\.pyc']
 let g:closetag_default_xml              =1
 let g:sparkupNextMapping                ='<c-h>'
-let g:pep8_map                          ='<F6>'
 let g:ackprg                            ="ack-grep -H --nocolor --nogroup --column"
 let g:surround_{char2nr("r")}           ="_(u\r)"
 let g:virtualenv_directory              ="/home/tuxcanfly/.virtualenvs2.7/"
@@ -82,7 +81,6 @@ Bundle 'vim-scripts/The-NERD-tree'
 Bundle 'vim-scripts/trailing-whitespace'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'vim-scripts/UltiSnips'
-Bundle 'vim-scripts/pep8'
 Bundle 'html5.vim'
 Bundle 'michaeljsmith/vim-indent-object'
 Bundle 'argtextobj.vim'
@@ -98,8 +96,6 @@ Bundle 'scrooloose/syntastic'
 
 """ ---- Keybindings ----
 
-" toggle NERDTree
-map <F4> :NERDTreeToggle<CR>
 " toggle fugitive status
 map <silent><leader>s :Gstatus<CR>
 " toggle fugitive diff
@@ -121,8 +117,10 @@ map <leader>gc  :Ack --css <cword>
 map <leader>w :FixWhitespace<CR>
 
 
-nmap <F5>       :Gentags<CR>
 nmap <F3>       :TagbarToggle<CR>
+nmap <F4>       :NERDTreeToggle<CR>
+nmap <F5>       :Gentags<CR>
+nmap <F6>       :SyntasticToggleMode<CR>
 nmap <leader>fp :Git push<CR>
 nmap <leader>fm :Git pull<CR>
 nmap <leader>fc :Gread<CR>
