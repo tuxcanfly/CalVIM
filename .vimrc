@@ -56,7 +56,7 @@ let g:syntastic_check_on_open           =1
 let g:syntastic_error_symbol            ='✗'
 let g:syntastic_warning_symbol          ='⚠'
 
-colorscheme lucius
+colorscheme badwolf
 function! s:Gentags()
     :! find . -name '*.py' | xargs ctags
 endfunction
