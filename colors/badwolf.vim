@@ -275,7 +275,7 @@ call s:HL('Typedef', 'taffy', '', 'bold')
 call s:HL('Exception', 'lime', '', 'bold')
 
 " Misc
-call s:HL('Error',  'snow',   'taffy', 'bold')
+call s:HL('Error',  'snow',   'darkroast', 'bold')
 call s:HL('Debug',  'snow',   '',      'bold')
 call s:HL('Ignore', 'gravel', '',      '')
 
