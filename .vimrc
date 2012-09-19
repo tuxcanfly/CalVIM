@@ -56,6 +56,7 @@ let g:neocomplcache_enable_at_startup   =1
 let g:syntastic_check_on_open           =1
 let g:syntastic_error_symbol            ='✗'
 let g:syntastic_warning_symbol          ='⚠'
+let g:syntastic_python_checker          ='pylint'
 
 colorscheme badwolf
 function! s:Gentags()
