@@ -126,7 +126,7 @@ nmap <F6>       :SyntasticToggleMode<CR>
 nmap <leader>fp :Git push<CR>
 nmap <leader>fm :Git pull<CR>
 nmap <leader>fc :Gread<CR>
-nmap <C-s>      :w<CR>
+nmap <C-s>      :wa<CR>
 nmap <leader>x  :x<CR>
 
 
