@@ -98,6 +98,7 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'tuxcanfly/vim-json'
 Bundle 'majutsushi/tagbar'
 Bundle 'scrooloose/syntastic'
+Bundle 'embear/vim-localvimrc'
 
 """ ---- Keybindings ----
 
