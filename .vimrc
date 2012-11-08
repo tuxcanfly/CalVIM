@@ -6,6 +6,7 @@ filetype plugin indent on
 
 set autoindent                                              " always set autoindenting on
 set autoread
+set autowriteall
 set copyindent                                              " copy the previous indentation on autoindenting
 set expandtab
 set hidden
@@ -30,7 +31,7 @@ set t_Co            =256
 set wildignore      =*.py[co]
 set wildmode        =list:longest,list:full
 set clipboard       =unnamedplus
-set gfn             =Consolas\ 12
+set gfn             =Envy\ Code\ R\ for\ Powerline\ 12
 set background      =dark
 set tags            +=~/.tags/tags
 set path            +=templates
@@ -67,6 +68,7 @@ command! -nargs=0 Gentags call s:Gentags()
 
 autocmd     FileType            html        set         ft          =htmldjango.html
 autocmd     FileType            htmldjango  set         ft          =htmldjango.html
+autocmd     FileType            markdown    setlocal    tw          =74 fo+=a
 autocmd     FileType            coffee      setlocal    ts          =2  sts=2   sw=2    et
 autocmd     FileType            jade        setlocal    ts          =2  sts=2   sw=2    et
 
@@ -137,6 +139,8 @@ nnoremap <leader><space> :noh<CR>
 nnoremap ; :
 " open gf in new tab
 nnoremap gf <C-W>gf
+nnoremap Q gqap
+nnoremap <leader>= ea<C-X><C-S>
 
 
 " clear ^M messup
