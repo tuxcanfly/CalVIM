@@ -55,9 +55,9 @@ let g:Powerline_symbols                 ="fancy"
 let g:UltiSnipsSnippetDirectories       =["UltiSnips", "snippets"]
 let g:neocomplcache_enable_at_startup   =1
 let g:syntastic_check_on_open           =1
-let g:syntastic_error_symbol            ='✗'
 let g:syntastic_warning_symbol          ='⚠'
 let g:syntastic_python_checker          ='pylint'
+let g:localvimrc_sandbox                =0
 
 colorscheme badwolf
 function! s:Gentags()
@@ -130,6 +130,7 @@ nmap <F6>       :SyntasticToggleMode<CR>
 nmap <leader>fp :Git push<CR>
 nmap <leader>fm :Git pull<CR>
 nmap <leader>fc :Gread<CR>
+nmap <leader>fw :Gwrite<CR>
 nmap <C-s>      :wa<CR>
 nmap <leader>x  :x<CR>
 
