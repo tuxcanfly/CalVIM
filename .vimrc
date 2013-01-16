@@ -57,7 +57,6 @@ let g:neocomplcache_enable_at_startup   =1
 let g:syntastic_check_on_open           =1
 let g:syntastic_warning_symbol          ='⚠'
 let g:syntastic_python_checker          ='pylint'
-let g:localvimrc_sandbox                =0
 
 colorscheme badwolf
 function! s:Gentags()
@@ -91,14 +90,15 @@ Bundle 'michaeljsmith/vim-indent-object'
 Bundle 'argtextobj.vim'
 Bundle 'ack.vim'
 Bundle 'jmcantrell/vim-virtualenv'
-Bundle 'Lokaltog/vim-powerline'
+Bundle 'tuxcanfly/vim-powerline'
 Bundle 'Shougo/neocomplcache'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'tuxcanfly/vim-json'
 Bundle 'majutsushi/tagbar'
 Bundle 'scrooloose/syntastic'
-Bundle 'embear/vim-localvimrc'
+Bundle 'skwp/greplace.vim'
+Bundle 'kien/ctrlp.vim'
 
 """ ---- Keybindings ----
 
