@@ -64,6 +64,10 @@ function! s:Gentags()
 endfunction
 command! -nargs=0 Gentags call s:Gentags()
 
+if filereadable(".lvimrc")
+    source .lvimrc
+endif
+
 
 autocmd     FileType            html        set         ft          =htmldjango.html
 autocmd     FileType            htmldjango  set         ft          =htmldjango.html
