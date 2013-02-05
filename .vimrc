@@ -54,9 +54,6 @@ let g:Powerline_colorscheme             ="colorful"
 let g:Powerline_symbols                 ="fancy"
 let g:UltiSnipsSnippetDirectories       =["UltiSnips", "snippets"]
 let g:neocomplcache_enable_at_startup   =1
-let g:syntastic_check_on_open           =1
-let g:syntastic_warning_symbol          ='⚠'
-let g:syntastic_python_checker          ='pylint'
 
 colorscheme badwolf
 function! s:Gentags()
@@ -77,7 +74,6 @@ autocmd     FileType            jade        setlocal    ts          =2  sts=2   
 
 """ ---- Bundles ------
 
-Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-ragtag'
@@ -100,7 +96,6 @@ Bundle 'digitaltoad/vim-jade'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'tuxcanfly/vim-json'
 Bundle 'majutsushi/tagbar'
-Bundle 'scrooloose/syntastic'
 Bundle 'skwp/greplace.vim'
 Bundle 'kien/ctrlp.vim'
 

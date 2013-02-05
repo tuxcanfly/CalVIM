@@ -1,2 +1,4 @@
 *.pyc
 .netrwhist
+bundle/*
+!bundle/vundle/
