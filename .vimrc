@@ -98,6 +98,7 @@ Bundle 'tuxcanfly/vim-json'
 Bundle 'majutsushi/tagbar'
 Bundle 'skwp/greplace.vim'
 Bundle 'kien/ctrlp.vim'
+Bundle 'jamessan/vim-gnupg'
 
 """ ---- Keybindings ----
 
