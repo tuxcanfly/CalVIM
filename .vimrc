@@ -55,7 +55,7 @@ let g:Powerline_symbols                 ="fancy"
 let g:UltiSnipsSnippetDirectories       =["UltiSnips", "snippets"]
 let g:neocomplcache_enable_at_startup   =1
 
-colorscheme badwolf
+colorscheme ir_black
 function! s:Gentags()
     :! find . -name '*.py' | xargs ctags
 endfunction
@@ -88,7 +88,7 @@ Bundle 'vim-scripts/UltiSnips'
 Bundle 'html5.vim'
 Bundle 'michaeljsmith/vim-indent-object'
 Bundle 'argtextobj.vim'
-Bundle 'ack.vim'
+Bundle 'mileszs/ack.vim'
 Bundle 'jmcantrell/vim-virtualenv'
 Bundle 'tuxcanfly/vim-powerline'
 Bundle 'Shougo/neocomplcache'
@@ -99,6 +99,8 @@ Bundle 'majutsushi/tagbar'
 Bundle 'skwp/greplace.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'jamessan/vim-gnupg'
+Bundle 'scrooloose/syntastic'
+Bundle 'airblade/vim-gitgutter'
 
 """ ---- Keybindings ----
 
@@ -159,3 +161,4 @@ noremap <C-l> <C-w>l
 
 " allow the . to execute once for each line of a visual selection
 vnoremap . :normal .<CR>
+let g:ackprg                            ="ack-grep -H --nocolor --nogroup --column"
