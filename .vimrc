@@ -54,6 +54,7 @@ let g:Powerline_colorscheme             ="colorful"
 let g:Powerline_symbols                 ="fancy"
 let g:UltiSnipsSnippetDirectories       =["UltiSnips", "snippets"]
 let g:neocomplcache_enable_at_startup   =1
+let g:syntastic_python_flake8_args='--ignore=E501,E128,E225'
 
 colorscheme ir_black
 function! s:Gentags()
