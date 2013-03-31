@@ -37,7 +37,6 @@ set tags            +=~/.tags/tags
 set path            +=templates
 set includeexpr     =substitute(v:fname,'\\.','/','g')
 set suffixesadd     =.py
-set statusline      =[%n]%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 set laststatus      =2
 set completeopt     =menu
 set rtp             +=~/.vim/bundle/vundle/
@@ -69,7 +68,6 @@ endif
 
 autocmd     FileType            html        set         ft          =htmldjango.html
 autocmd     FileType            htmldjango  set         ft          =htmldjango.html
-autocmd     FileType            markdown    setlocal    tw          =74 fo+=a
 autocmd     FileType            coffee      setlocal    ts          =2  sts=2   sw=2    et
 autocmd     FileType            jade        setlocal    ts          =2  sts=2   sw=2    et
 
@@ -102,6 +100,8 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'jamessan/vim-gnupg'
 Bundle 'scrooloose/syntastic'
 Bundle 'airblade/vim-gitgutter'
+Bundle 'benmills/vimux'
+Bundle 'tuxcanfly/vimux-django-tests'
 
 """ ---- Keybindings ----
 
@@ -124,7 +124,6 @@ map <leader>gj  :Ack --js <cword>
 map <leader>gc  :Ack --css <cword>
 " remove trailing whitespace
 map <leader>w :FixWhitespace<CR>
-
 
 nmap <F3>       :TagbarToggle<CR>
 nmap <F4>       :NERDTreeToggle<CR>
