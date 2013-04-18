@@ -70,6 +70,7 @@ autocmd     FileType            html        set         ft          =htmldjango.
 autocmd     FileType            htmldjango  set         ft          =htmldjango.html
 autocmd     FileType            coffee      setlocal    ts          =2  sts=2   sw=2    et
 autocmd     FileType            jade        setlocal    ts          =2  sts=2   sw=2    et
+autocmd     FileType            python      compiler    pyunit
 
 """ ---- Bundles ------
 
