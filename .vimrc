@@ -55,7 +55,7 @@ let g:UltiSnipsSnippetDirectories       =["UltiSnips", "snippets"]
 let g:neocomplcache_enable_at_startup   =1
 let g:syntastic_python_flake8_args='--ignore=E501,E128,E225'
 
-colorscheme jellybeans
+colorscheme herald
 function! s:Gentags()
     :! find . -name '*.py' | xargs ctags
 endfunction
