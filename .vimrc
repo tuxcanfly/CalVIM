@@ -39,8 +39,12 @@ set includeexpr     =substitute(v:fname,'\\.','/','g')
 set suffixesadd     =.py
 set laststatus      =2
 set completeopt     =menu
-set rtp             +=~/.vim/bundle/vundle/
-
+set runtimepath     +=~/.vim/bundle/vundle/
+filetype            off
+filetype            plugin indent off
+set runtimepath     +=/usr/lib/go/misc/vim/
+filetype            plugin indent on
+syntax              on
 call vundle#rc()
 
 let NERDTreeIgnore                      =['\.pyc']
