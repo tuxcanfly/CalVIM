@@ -31,7 +31,7 @@ set t_Co            =256
 set wildignore      =*.py[co]
 set wildmode        =list:longest,list:full
 set clipboard       =unnamedplus
-set gfn             =Envy\ Code\ R\ for\ Powerline\ 12
+set gfn             =Consolas\ for\ Powerline\ 12
 set background      =dark
 set tags            +=~/.tags/tags
 set path            +=templates
@@ -39,8 +39,12 @@ set includeexpr     =substitute(v:fname,'\\.','/','g')
 set suffixesadd     =.py
 set laststatus      =2
 set completeopt     =menu
-set rtp             +=~/.vim/bundle/vundle/
-
+set runtimepath     +=~/.vim/bundle/vundle/
+filetype            off
+filetype            plugin indent off
+set runtimepath     +=/usr/lib/go/misc/vim/
+filetype            plugin indent on
+syntax              on
 call vundle#rc()
 
 let NERDTreeIgnore                      =['\.pyc']
@@ -49,13 +53,13 @@ let g:sparkupNextMapping                ='<c-h>'
 let g:ackprg                            ="ack-grep -H --nocolor --nogroup --column"
 let g:surround_{char2nr("r")}           ="_(u\r)"
 let g:virtualenv_directory              ="~/.virtualenvs2.7/"
-let g:Powerline_colorscheme             ="colorful"
+let g:Powerline_colorscheme             ="zenburn"
 let g:Powerline_symbols                 ="fancy"
 let g:UltiSnipsSnippetDirectories       =["UltiSnips", "snippets"]
 let g:neocomplcache_enable_at_startup   =1
 let g:syntastic_python_flake8_args='--ignore=E501,E128,E225'
 
-colorscheme ir_black
+colorscheme xoria256
 function! s:Gentags()
     :! find . -name '*.py' | xargs ctags
 endfunction
