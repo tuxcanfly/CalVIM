@@ -47,34 +47,7 @@ filetype            plugin indent on
 syntax              on
 call vundle#rc()
 
-let NERDTreeIgnore                      =['\.pyc']
-let g:closetag_default_xml              =1
-let g:sparkupNextMapping                ='<c-h>'
-let g:ackprg                            ="ack-grep -H --nocolor --nogroup --column"
-let g:surround_{char2nr("r")}           ="_(u\r)"
-let g:virtualenv_directory              ="~/.virtualenvs2.7/"
-let g:Powerline_colorscheme             ="zenburn"
-let g:Powerline_symbols                 ="fancy"
-let g:UltiSnipsSnippetDirectories       =["UltiSnips", "snippets"]
-let g:neocomplcache_enable_at_startup   =1
-let g:syntastic_python_flake8_args='--ignore=E501,E128,E225'
-
-colorscheme xoria256
-function! s:Gentags()
-    :! find . -name '*.py' | xargs ctags
-endfunction
-command! -nargs=0 Gentags call s:Gentags()
-
-if filereadable(".lvimrc")
-    source .lvimrc
-endif
-
-
-autocmd     FileType            html        set         ft          =htmldjango.html
-autocmd     FileType            htmldjango  set         ft          =htmldjango.html
-autocmd     FileType            coffee      setlocal    ts          =2  sts=2   sw=2    et
-autocmd     FileType            jade        setlocal    ts          =2  sts=2   sw=2    et
-autocmd     FileType            python      compiler    pyunit
+colorscheme ir_black
 
 """ ---- Bundles ------
 
@@ -82,31 +55,17 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-ragtag'
 Bundle 'tpope/vim-unimpaired'
+Bundle 'tpope/vim-repeat'
 Bundle 'bkad/CamelCaseMotion'
 Bundle 'matchit.zip'
-Bundle 'kogakure/vim-sparkup'
-Bundle 'vim-scripts/The-NERD-tree'
 Bundle 'vim-scripts/trailing-whitespace'
 Bundle 'scrooloose/nerdcommenter'
-Bundle 'vim-scripts/UltiSnips'
-Bundle 'html5.vim'
-Bundle 'michaeljsmith/vim-indent-object'
 Bundle 'argtextobj.vim'
-Bundle 'mileszs/ack.vim'
-Bundle 'jmcantrell/vim-virtualenv'
-Bundle 'tuxcanfly/vim-powerline'
-Bundle 'Shougo/neocomplcache'
-Bundle 'digitaltoad/vim-jade'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'tuxcanfly/vim-json'
-Bundle 'majutsushi/tagbar'
-Bundle 'skwp/greplace.vim'
-Bundle 'kien/ctrlp.vim'
 Bundle 'jamessan/vim-gnupg'
 Bundle 'scrooloose/syntastic'
-Bundle 'airblade/vim-gitgutter'
-Bundle 'benmills/vimux'
-Bundle 'tuxcanfly/vimux-django-tests'
+Bundle 'bling/vim-airline'
+Bundle 'Shougo/unite.vim'
+Bundle 'Shougo/vimproc.vim'
 
 """ ---- Keybindings ----
 
@@ -121,18 +80,9 @@ map <silent>K       :tabnext<CR>
 map <silent>J       :tabprevious<CR>
 " new tab
 map <Leader>t :tabnew<CR>
-" Project search
-map <leader>g   :Ack <cword>
-map <leader>gp  :Ack --py <cword>
-map <leader>gh  :Ack --html <cword>
-map <leader>gj  :Ack --js <cword>
-map <leader>gc  :Ack --css <cword>
 " remove trailing whitespace
 map <leader>w :FixWhitespace<CR>
 
-nmap <F3>       :TagbarToggle<CR>
-nmap <F4>       :NERDTreeToggle<CR>
-nmap <F5>       :Gentags<CR>
 nmap <F6>       :SyntasticToggleMode<CR>
 nmap <leader>fp :Git push<CR>
 nmap <leader>fm :Git pull<CR>
@@ -151,19 +101,14 @@ nnoremap gf <C-W>gf
 nnoremap Q gqap
 nnoremap <leader>= ea<C-X><C-S>
 
-
 " clear ^M messup
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
-" prevent cursor jumping
-noremap <S-Up>      <Up>
-noremap <S-Down>    <Down>
 " move between splits
 noremap <C-h> <C-w>h
 noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
 
-
-" allow the . to execute once for each line of a visual selection
-vnoremap . :normal .<CR>
-let g:ackprg                            ="ack-grep -H --nocolor --nogroup --column"
+" Unite
+nnoremap <C-p> :Unite file_rec/async<cr>
+nnoremap <space>/ :Unite ack.<cr>
