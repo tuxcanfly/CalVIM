@@ -66,6 +66,7 @@ Bundle 'scrooloose/syntastic'
 Bundle 'bling/vim-airline'
 Bundle 'Shougo/unite.vim'
 Bundle 'Shougo/vimproc.vim'
+Bundle 'tpope/vim-dispatch'
 
 """ ---- Keybindings ----
 
@@ -110,5 +111,5 @@ noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
 
 " Unite
-nnoremap <C-p> :Unite file_rec/async<cr>
+nnoremap <C-p> :Unite file_rec<cr>
 nnoremap <space>/ :Unite ack.<cr>
