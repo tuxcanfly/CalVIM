@@ -113,3 +113,8 @@ noremap <C-l> <C-w>l
 " Unite
 nnoremap <C-p> :Unite file_rec<cr>
 nnoremap <space>/ :Unite ack.<cr>
+
+" Project settings
+if filereadable(".lvimrc")
+    source .lvimrc
+endif
