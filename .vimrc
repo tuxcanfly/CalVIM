@@ -67,6 +67,7 @@ Bundle 'bling/vim-airline'
 Bundle 'Shougo/unite.vim'
 Bundle 'Shougo/vimproc.vim'
 Bundle 'tpope/vim-dispatch'
+Bundle 'yuratomo/w3m.vim'
 
 """ ---- Keybindings ----
 
