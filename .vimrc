@@ -119,3 +119,12 @@ nnoremap <space>/ :Unite ack.<cr>
 if filereadable(".lvimrc")
     source .lvimrc
 endif
+
+abbr ipdb import ipdb; ipdb.set_trace()
+abbr cl console.log(
+abbr f() function () {}
+
+
+let g:unite_enable_start_insert = 1
+let g:unite_winheight = 10
+let g:unite_split_rule = 'botright'
