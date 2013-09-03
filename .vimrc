@@ -40,6 +40,8 @@ set suffixesadd     =.py
 set laststatus      =2
 set completeopt     =menu
 set runtimepath     +=~/.vim/bundle/vundle/
+set encoding        =utf-8
+
 filetype            off
 filetype            plugin indent off
 set runtimepath     +=/usr/lib/go/misc/vim/
@@ -128,3 +130,13 @@ abbr f() function () {}
 let g:unite_enable_start_insert = 1
 let g:unite_winheight = 10
 let g:unite_split_rule = 'botright'
+let g:airline_powerline_fonts=1
+
+let g:airline_symbols = {}
+let g:airline_left_sep = '⮀'
+let g:airline_left_alt_sep = '⮁'
+let g:airline_right_sep = '⮂'
+let g:airline_right_alt_sep = '⮃'
+let g:airline_symbols.branch = '⭠'
+let g:airline_symbols.readonly = '⭤'
+let g:airline_symbols.linenr = '⭡'
