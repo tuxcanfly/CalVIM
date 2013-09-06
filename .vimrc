@@ -49,7 +49,7 @@ filetype            plugin indent on
 syntax              on
 call vundle#rc()
 
-colorscheme synic
+colorscheme ir_black
 
 """ ---- Bundles ------
 
@@ -126,12 +126,10 @@ abbr ipdb import ipdb; ipdb.set_trace()
 abbr cl console.log(
 abbr f() function () {}
 
-
 let g:unite_enable_start_insert = 1
 let g:unite_winheight = 10
 let g:unite_split_rule = 'botright'
 let g:airline_powerline_fonts=1
-
 let g:airline_symbols = {}
 let g:airline_left_sep = '⮀'
 let g:airline_left_alt_sep = '⮁'
@@ -140,3 +138,5 @@ let g:airline_right_alt_sep = '⮃'
 let g:airline_symbols.branch = '⭠'
 let g:airline_symbols.readonly = '⭤'
 let g:airline_symbols.linenr = '⭡'
+let g:airline_theme  = 'wombat'
+let g:syntastic_mode_map = { 'mode': 'passive' }
