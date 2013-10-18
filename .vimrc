@@ -49,7 +49,7 @@ filetype            plugin indent on
 syntax              on
 call vundle#rc()
 
-colorscheme ir_black
+colorscheme sol
 
 """ ---- Bundles ------
 
