@@ -31,7 +31,7 @@ set t_Co            =256
 set wildignore      =*.py[co]
 set wildmode        =list:longest,list:full
 set clipboard       =unnamedplus
-set gfn             =Consolas\ for\ Powerline\ 12
+set gfn             =Meslo\ LG\ L\ for\ Powerline\ 12
 set background      =dark
 set tags            +=~/.tags/tags
 set path            +=templates
@@ -54,12 +54,17 @@ let g:ackprg                            ="ack-grep -H --nocolor --nogroup --colu
 let g:surround_{char2nr("r")}           ="_(u\r)"
 let g:virtualenv_directory              ="~/.virtualenvs2.7/"
 let g:Powerline_colorscheme             ="colorful"
-let g:Powerline_symbols                 ="fancy"
+let g:Powerline_symbols                 ="unicode"
 let g:UltiSnipsSnippetDirectories       =["UltiSnips", "snippets"]
 let g:neocomplcache_enable_at_startup   =1
-let g:syntastic_python_flake8_args='--ignore=E501,E128,E225'
+let g:syntastic_python_flake8_args      ='--ignore=E501,E128,E225'
+let g:syntastic_mode_map                ={ 'mode': 'passive' }
+let g:signify_mapping_next_hunk         ='<leader>h'
+let g:signify_mapping_prev_hunk         ='<leader>H'
+let g:signify_mapping_toggle_highlight  ='<leader>T'
 
-colorscheme molokai
+
+colorscheme jellybeans
 
 function! s:Gentags()
     :! find . -name '*.py' | xargs ctags
@@ -85,7 +90,7 @@ Bundle 'tpope/vim-ragtag'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'bkad/CamelCaseMotion'
 Bundle 'matchit.zip'
-Bundle 'kogakure/vim-sparkup'
+Bundle 'tristen/vim-sparkup'
 Bundle 'vim-scripts/The-NERD-tree'
 Bundle 'vim-scripts/trailing-whitespace'
 Bundle 'scrooloose/nerdcommenter'
@@ -105,9 +110,11 @@ Bundle 'skwp/greplace.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'jamessan/vim-gnupg'
 Bundle 'scrooloose/syntastic'
-Bundle 'airblade/vim-gitgutter'
+Bundle 'mhinz/vim-signify'
 Bundle 'benmills/vimux'
 Bundle 'tuxcanfly/vimux-django-tests'
+Bundle 'maksimr/vim-jsbeautify'
+Bundle 'yuratomo/w3m.vim'
 
 """ ---- Keybindings ----
 
