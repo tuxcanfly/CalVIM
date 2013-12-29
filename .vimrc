@@ -62,6 +62,7 @@ let g:syntastic_mode_map                ={ 'mode': 'passive' }
 let g:signify_mapping_next_hunk         ='<leader>h'
 let g:signify_mapping_prev_hunk         ='<leader>H'
 let g:signify_mapping_toggle_highlight  ='<leader>T'
+let g:ycm_global_ycm_extra_conf         ='~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
 
 
 colorscheme jellybeans
@@ -75,6 +76,11 @@ if filereadable(".lvimrc")
     source .lvimrc
 endif
 
+filetype off
+filetype plugin indent off
+set runtimepath+=$GOROOT/misc/vim
+filetype plugin indent on
+syntax on
 
 autocmd     FileType            html        set         ft          =htmldjango.html
 autocmd     FileType            htmldjango  set         ft          =htmldjango.html
@@ -115,6 +121,8 @@ Bundle 'benmills/vimux'
 Bundle 'tuxcanfly/vimux-django-tests'
 Bundle 'maksimr/vim-jsbeautify'
 Bundle 'yuratomo/w3m.vim'
+Bundle 'nvie/vim-flake8'
+Bundle 'Valloric/YouCompleteMe'
 
 """ ---- Keybindings ----
 
@@ -175,3 +183,15 @@ noremap <C-l> <C-w>l
 " allow the . to execute once for each line of a visual selection
 vnoremap . :normal .<CR>
 let g:ackprg                            ="ack-grep -H --nocolor --nogroup --column"
+
+if has("autocmd")
+    filetype off
+    filetype plugin indent off
+    set runtimepath+=/usr/share/vim/addons
+    filetype plugin indent on
+endif
+
+if has("syntax")
+    syntax off
+    syntax on
+endif
