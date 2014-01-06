@@ -4,3 +4,4 @@ pep8
 pyflakes
 ctags
 ack-grep
+w3m
