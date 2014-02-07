@@ -1,6 +1,8 @@
 filetype plugin on
 filetype plugin indent on
 
+set rtp+=~/.scripts/powerline/powerline/bindings/vim
+
 
 """ ---- Settings ----
 
@@ -53,7 +55,7 @@ let g:sparkupNextMapping                ='<c-h>'
 let g:ackprg                            ="ack-grep -H --nocolor --nogroup --column"
 let g:surround_{char2nr("r")}           ="_(u\r)"
 let g:virtualenv_directory              ="~/.virtualenvs2.7/"
-let g:Powerline_colorscheme             ="colorful"
+let g:Powerline_colorscheme             ="solarized"
 let g:Powerline_symbols                 ="unicode"
 let g:UltiSnipsSnippetDirectories       =["UltiSnips", "snippets"]
 let g:neocomplcache_enable_at_startup   =1
@@ -64,7 +66,7 @@ let g:signify_mapping_prev_hunk         ='<leader>H'
 let g:signify_mapping_toggle_highlight  ='<leader>T'
 
 
-colorscheme jellybeans
+colorscheme herald
 
 function! s:Gentags()
     :! find . -name '*.py' | xargs ctags
@@ -87,6 +89,7 @@ autocmd     FileType            python      compiler    pyunit
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-ragtag'
+Bundle 'tpope/vim-dispatch'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'bkad/CamelCaseMotion'
 Bundle 'matchit.zip'
@@ -100,7 +103,6 @@ Bundle 'michaeljsmith/vim-indent-object'
 Bundle 'argtextobj.vim'
 Bundle 'mileszs/ack.vim'
 Bundle 'jmcantrell/vim-virtualenv'
-Bundle 'tuxcanfly/vim-powerline'
 Bundle 'Shougo/neocomplcache'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'kchmck/vim-coffee-script'
@@ -115,6 +117,7 @@ Bundle 'benmills/vimux'
 Bundle 'tuxcanfly/vimux-django-tests'
 Bundle 'maksimr/vim-jsbeautify'
 Bundle 'yuratomo/w3m.vim'
+Bundle 'Rykka/riv.vim'
 
 """ ---- Keybindings ----
 
@@ -130,11 +133,7 @@ map <silent>J       :tabprevious<CR>
 " new tab
 map <Leader>t :tabnew<CR>
 " Project search
-map <leader>g   :Ack <cword>
-map <leader>gp  :Ack --py <cword>
-map <leader>gh  :Ack --html <cword>
-map <leader>gj  :Ack --js <cword>
-map <leader>gc  :Ack --css <cword>
+map <leader>g   :Ggrep <cword>
 " remove trailing whitespace
 map <leader>w :FixWhitespace<CR>
 
@@ -148,6 +147,7 @@ nmap <leader>fc :Gread<CR>
 nmap <leader>fw :Gwrite<CR>
 nmap <C-s>      :wa<CR>
 nmap <leader>x  :x<CR>
+nmap <F9>       :Dispatch<CR>
 
 
 " clear search highlight
