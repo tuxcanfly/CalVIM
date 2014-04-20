@@ -55,7 +55,7 @@ let g:sparkupNextMapping                ='<c-h>'
 let g:ackprg                            ="ack-grep -H --nocolor --nogroup --column"
 let g:surround_{char2nr("r")}           ="_(u\r)"
 let g:virtualenv_directory              ="~/.virtualenvs2.7/"
-let g:Powerline_colorscheme             ="solarized"
+let g:Powerline_colorscheme             ="colorful"
 let g:Powerline_symbols                 ="unicode"
 let g:UltiSnipsSnippetDirectories       =["UltiSnips", "snippets"]
 let g:neocomplcache_enable_at_startup   =1
@@ -66,9 +66,7 @@ let g:signify_mapping_prev_hunk         ='<leader>H'
 let g:signify_mapping_toggle_highlight  ='<leader>T'
 let g:ycm_global_ycm_extra_conf         ='~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
 
-
-colorscheme herald
-
+colorscheme xoria256
 function! s:Gentags()
     :! find . -name '*.py' | xargs ctags
 endfunction
@@ -89,6 +87,8 @@ autocmd     FileType            htmldjango  set         ft          =htmldjango.
 autocmd     FileType            coffee      setlocal    ts          =2  sts=2   sw=2    et
 autocmd     FileType            jade        setlocal    ts          =2  sts=2   sw=2    et
 autocmd     FileType            python      compiler    pyunit
+autocmd     FileType            modula2     set         ft          =markdown
+autocmd     FileType            go          setlocal    noexpandtab
 
 """ ---- Bundles ------
 
