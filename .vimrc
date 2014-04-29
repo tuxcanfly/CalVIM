@@ -52,6 +52,8 @@ let g:sparkupNextMapping                ='<c-h>'
 let g:ackprg                            ="ack-grep -H --nocolor --nogroup --column"
 let g:surround_{char2nr("r")}           ="_(u\r)"
 let g:virtualenv_directory              ="~/.virtualenvs2.7/"
+let g:Powerline_colorscheme             ="colorful"
+let g:Powerline_symbols                 ="unicode"
 let g:UltiSnipsSnippetDirectories       =["UltiSnips", "snippets"]
 let g:neocomplcache_enable_at_startup   =1
 let g:syntastic_python_flake8_args      ='--ignore=E501,E128,E225'
@@ -85,6 +87,8 @@ autocmd     FileType            htmldjango  set         ft          =htmldjango.
 autocmd     FileType            coffee      setlocal    ts          =2  sts=2   sw=2    et
 autocmd     FileType            jade        setlocal    ts          =2  sts=2   sw=2    et
 autocmd     FileType            python      compiler    pyunit
+autocmd     FileType            modula2     set         ft          =markdown
+autocmd     FileType            go          setlocal    noexpandtab
 
 """ ---- Bundles ------
 
