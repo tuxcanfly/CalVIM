@@ -1,9 +1,6 @@
 filetype plugin on
 filetype plugin indent on
 
-set rtp+=~/.scripts/powerline/powerline/bindings/vim
-
-
 """ ---- Settings ----
 
 set autoindent                                              " always set autoindenting on
@@ -35,7 +32,7 @@ set wildmode        =list:longest,list:full
 set clipboard       =unnamedplus
 set gfn             =Meslo\ LG\ L\ for\ Powerline\ 12
 set background      =dark
-set tags            +=~/.tags/tags
+set tags            +=~/.tags/django.tags
 set path            +=templates
 set includeexpr     =substitute(v:fname,'\\.','/','g')
 set suffixesadd     =.py
@@ -55,8 +52,6 @@ let g:sparkupNextMapping                ='<c-h>'
 let g:ackprg                            ="ack-grep -H --nocolor --nogroup --column"
 let g:surround_{char2nr("r")}           ="_(u\r)"
 let g:virtualenv_directory              ="~/.virtualenvs2.7/"
-let g:Powerline_colorscheme             ="solarized"
-let g:Powerline_symbols                 ="unicode"
 let g:UltiSnipsSnippetDirectories       =["UltiSnips", "snippets"]
 let g:neocomplcache_enable_at_startup   =1
 let g:syntastic_python_flake8_args      ='--ignore=E501,E128,E225'
@@ -65,9 +60,10 @@ let g:signify_mapping_next_hunk         ='<leader>h'
 let g:signify_mapping_prev_hunk         ='<leader>H'
 let g:signify_mapping_toggle_highlight  ='<leader>T'
 let g:ycm_global_ycm_extra_conf         ='~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
+let g:airline_powerline_fonts           = 1
 
 
-colorscheme herald
+colorscheme badwolf
 
 function! s:Gentags()
     :! find . -name '*.py' | xargs ctags
@@ -118,13 +114,13 @@ Bundle 'skwp/greplace.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'jamessan/vim-gnupg'
 Bundle 'scrooloose/syntastic'
-Bundle 'mhinz/vim-signify'
 Bundle 'benmills/vimux'
 Bundle 'tuxcanfly/vimux-django-tests'
 Bundle 'maksimr/vim-jsbeautify'
 Bundle 'yuratomo/w3m.vim'
 Bundle 'nvie/vim-flake8'
 Bundle 'Valloric/YouCompleteMe'
+Bundle 'bling/vim-airline'
 
 """ ---- Keybindings ----
 
