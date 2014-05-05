@@ -30,7 +30,7 @@ set t_Co            =256
 set wildignore      =*.py[co]
 set wildmode        =list:longest,list:full
 set clipboard       =unnamedplus
-set gfn             =Meslo\ LG\ L\ for\ Powerline\ 12
+set gfn             =Sauce\ Code\ Powerline\ Regular\ 14
 set background      =dark
 set tags            +=~/.tags/django.tags
 set path            +=templates
@@ -65,7 +65,7 @@ let g:ycm_global_ycm_extra_conf         ='~/.vim/bundle/YouCompleteMe/cpp/ycm/.y
 let g:airline_powerline_fonts           = 1
 
 
-colorscheme badwolf
+colorscheme mustang
 
 function! s:Gentags()
     :! find . -name '*.py' | xargs ctags
