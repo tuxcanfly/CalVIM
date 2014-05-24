@@ -1,7 +1,6 @@
 filetype plugin on
 filetype plugin indent on
 
-
 """ ---- Settings ----
 
 set autoindent                                              " always set autoindenting on
@@ -31,9 +30,9 @@ set t_Co            =256
 set wildignore      =*.py[co]
 set wildmode        =list:longest,list:full
 set clipboard       =unnamedplus
-set gfn             =Consolas\ for\ Powerline\ 12
+set gfn             =Sauce\ Code\ Powerline\ Regular\ 14
 set background      =dark
-set tags            +=~/.tags/tags
+set tags            +=~/.tags/django.tags
 set path            +=templates
 set includeexpr     =substitute(v:fname,'\\.','/','g')
 set suffixesadd     =.py
@@ -53,13 +52,21 @@ let g:sparkupNextMapping                ='<c-h>'
 let g:ackprg                            ="ack-grep -H --nocolor --nogroup --column"
 let g:surround_{char2nr("r")}           ="_(u\r)"
 let g:virtualenv_directory              ="~/.virtualenvs2.7/"
-let g:Powerline_colorscheme             ="zenburn"
-let g:Powerline_symbols                 ="fancy"
+let g:Powerline_colorscheme             ="colorful"
+let g:Powerline_symbols                 ="unicode"
 let g:UltiSnipsSnippetDirectories       =["UltiSnips", "snippets"]
 let g:neocomplcache_enable_at_startup   =1
-let g:syntastic_python_flake8_args='--ignore=E501,E128,E225'
+let g:syntastic_python_flake8_args      ='--ignore=E501,E128,E225'
+let g:syntastic_mode_map                ={ 'mode': 'passive' }
+let g:signify_mapping_next_hunk         ='<leader>h'
+let g:signify_mapping_prev_hunk         ='<leader>H'
+let g:signify_mapping_toggle_highlight  ='<leader>T'
+let g:ycm_global_ycm_extra_conf         ='~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
+let g:airline_powerline_fonts           = 1
 
-colorscheme xoria256
+
+colorscheme mustang
+
 function! s:Gentags()
     :! find . -name '*.py' | xargs ctags
 endfunction
@@ -69,22 +76,30 @@ if filereadable(".lvimrc")
     source .lvimrc
 endif
 
+filetype off
+filetype plugin indent off
+set runtimepath+=$GOROOT/misc/vim
+filetype plugin indent on
+syntax on
 
 autocmd     FileType            html        set         ft          =htmldjango.html
 autocmd     FileType            htmldjango  set         ft          =htmldjango.html
 autocmd     FileType            coffee      setlocal    ts          =2  sts=2   sw=2    et
 autocmd     FileType            jade        setlocal    ts          =2  sts=2   sw=2    et
 autocmd     FileType            python      compiler    pyunit
+autocmd     FileType            modula2     set         ft          =markdown
+autocmd     FileType            go          setlocal    noexpandtab
 
 """ ---- Bundles ------
 
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-ragtag'
+Bundle 'tpope/vim-dispatch'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'bkad/CamelCaseMotion'
 Bundle 'matchit.zip'
-Bundle 'kogakure/vim-sparkup'
+Bundle 'tristen/vim-sparkup'
 Bundle 'vim-scripts/The-NERD-tree'
 Bundle 'vim-scripts/trailing-whitespace'
 Bundle 'scrooloose/nerdcommenter'
@@ -94,7 +109,6 @@ Bundle 'michaeljsmith/vim-indent-object'
 Bundle 'argtextobj.vim'
 Bundle 'mileszs/ack.vim'
 Bundle 'jmcantrell/vim-virtualenv'
-Bundle 'tuxcanfly/vim-powerline'
 Bundle 'Shougo/neocomplcache'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'kchmck/vim-coffee-script'
@@ -104,7 +118,6 @@ Bundle 'skwp/greplace.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'jamessan/vim-gnupg'
 Bundle 'scrooloose/syntastic'
-Bundle 'airblade/vim-gitgutter'
 Bundle 'benmills/vimux'
 Bundle 'tuxcanfly/vimux-django-tests'
 Bundle 'maksimr/vim-jsbeautify'
@@ -126,11 +139,7 @@ map <silent>J       :tabprevious<CR>
 " new tab
 map <Leader>t :tabnew<CR>
 " Project search
-map <leader>g   :Ack <cword>
-map <leader>gp  :Ack --py <cword>
-map <leader>gh  :Ack --html <cword>
-map <leader>gj  :Ack --js <cword>
-map <leader>gc  :Ack --css <cword>
+map <leader>g   :Ggrep <cword>
 " remove trailing whitespace
 map <leader>w :FixWhitespace<CR>
 
@@ -144,6 +153,7 @@ nmap <leader>fc :Gread<CR>
 nmap <leader>fw :Gwrite<CR>
 nmap <C-s>      :wa<CR>
 nmap <leader>x  :x<CR>
+nmap <F9>       :Dispatch<CR>
 
 
 " clear search highlight
@@ -171,3 +181,15 @@ noremap <C-l> <C-w>l
 " allow the . to execute once for each line of a visual selection
 vnoremap . :normal .<CR>
 let g:ackprg                            ="ack-grep -H --nocolor --nogroup --column"
+
+if has("autocmd")
+    filetype off
+    filetype plugin indent off
+    set runtimepath+=/usr/share/vim/addons
+    filetype plugin indent on
+endif
+
+if has("syntax")
+    syntax off
+    syntax on
+endif
