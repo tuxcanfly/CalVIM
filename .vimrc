@@ -107,6 +107,10 @@ Bundle 'scrooloose/syntastic'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'benmills/vimux'
 Bundle 'tuxcanfly/vimux-django-tests'
+Bundle 'maksimr/vim-jsbeautify'
+Bundle 'nvie/vim-flake8'
+Bundle 'bling/vim-airline'
+Bundle 'fatih/vim-go'
 
 """ ---- Keybindings ----
 
