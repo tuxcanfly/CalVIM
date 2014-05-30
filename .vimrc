@@ -28,7 +28,8 @@ set shiftwidth      =4                                      " number of spaces t
 set pastetoggle     =<F2>
 set t_Co            =256
 set wildignore      =*.py[co]
-set wildmode        =list:longest,list:full
+set wildmode        =full
+set wildmenu
 set clipboard       =unnamedplus
 set gfn             =Sauce\ Code\ Powerline\ Regular\ 14
 set background      =dark
