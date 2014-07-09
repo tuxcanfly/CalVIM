@@ -55,7 +55,6 @@ let g:surround_{char2nr("r")}           ="_(u\r)"
 let g:virtualenv_directory              ="~/.virtualenvs2.7/"
 let g:Powerline_colorscheme             ="colorful"
 let g:Powerline_symbols                 ="unicode"
-let g:UltiSnipsSnippetDirectories       =["UltiSnips", "snippets"]
 let g:neocomplcache_enable_at_startup   =1
 let g:syntastic_python_flake8_args      ='--ignore=E501,E128,E225'
 let g:syntastic_mode_map                ={ 'mode': 'passive' }
@@ -67,11 +66,6 @@ let g:airline_powerline_fonts           = 1
 
 
 colorscheme mustang
-
-function! s:Gentags()
-    :! find . -name '*.py' | xargs ctags
-endfunction
-command! -nargs=0 Gentags call s:Gentags()
 
 if filereadable(".lvimrc")
     source .lvimrc
@@ -125,6 +119,8 @@ Bundle 'maksimr/vim-jsbeautify'
 Bundle 'nvie/vim-flake8'
 Bundle 'bling/vim-airline'
 Bundle 'dhruvasagar/vim-table-mode'
+Bundle 'Blackrush/vim-gocode'
+Bundle 'dgryski/vim-godef'
 
 """ ---- Keybindings ----
 
@@ -146,7 +142,7 @@ map <leader>w :FixWhitespace<CR>
 
 nmap <F3>       :TagbarToggle<CR>
 nmap <F4>       :NERDTreeToggle<CR>
-nmap <F5>       :Gentags<CR>
+nmap <F5>       :!ctags -R<CR>
 nmap <F6>       :SyntasticToggleMode<CR>
 nmap <leader>fp :Git push<CR>
 nmap <leader>fm :Git pull<CR>
