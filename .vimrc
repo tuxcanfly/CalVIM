@@ -63,9 +63,10 @@ let g:signify_mapping_prev_hunk         ='<leader>H'
 let g:signify_mapping_toggle_highlight  ='<leader>T'
 let g:ycm_global_ycm_extra_conf         ='~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
 let g:airline_powerline_fonts           = 1
+let g:godef_split                       =0
+let g:godef_same_file_in_same_window    =1
 
-
-colorscheme mustang
+colorscheme wombat256mod
 
 if filereadable(".lvimrc")
     source .lvimrc
