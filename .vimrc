@@ -40,11 +40,6 @@ set suffixesadd     =.py
 set laststatus      =2
 set completeopt     =menu
 set runtimepath     +=~/.vim/bundle/vundle/
-filetype            off
-filetype            plugin indent off
-set runtimepath     +=/usr/lib/go/misc/vim/
-filetype            plugin indent on
-syntax              on
 call vundle#rc()
 
 let NERDTreeIgnore                      =['\.pyc']
@@ -61,10 +56,7 @@ let g:syntastic_mode_map                ={ 'mode': 'passive' }
 let g:signify_mapping_next_hunk         ='<leader>h'
 let g:signify_mapping_prev_hunk         ='<leader>H'
 let g:signify_mapping_toggle_highlight  ='<leader>T'
-let g:ycm_global_ycm_extra_conf         ='~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
-let g:airline_powerline_fonts           = 1
-let g:godef_split                       =0
-let g:godef_same_file_in_same_window    =1
+let g:go_bin_path                       = expand("~/.bin")
 
 colorscheme wombat256mod
 
@@ -72,11 +64,6 @@ if filereadable(".lvimrc")
     source .lvimrc
 endif
 
-filetype off
-filetype plugin indent off
-set runtimepath+=$GOROOT/misc/vim
-filetype plugin indent on
-syntax on
 
 autocmd     FileType            html        set         ft          =htmldjango.html
 autocmd     FileType            htmldjango  set         ft          =htmldjango.html
@@ -86,43 +73,41 @@ autocmd     FileType            python      compiler    pyunit
 autocmd     FileType            modula2     set         ft          =markdown
 autocmd     FileType            go          setlocal    noexpandtab
 
-""" ---- Bundles ------
+""" ---- Plugins ------
 
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-ragtag'
-Bundle 'tpope/vim-dispatch'
-Bundle 'tpope/vim-unimpaired'
-Bundle 'bkad/CamelCaseMotion'
-Bundle 'matchit.zip'
-Bundle 'tristen/vim-sparkup'
-Bundle 'vim-scripts/The-NERD-tree'
-Bundle 'vim-scripts/trailing-whitespace'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'vim-scripts/UltiSnips'
-Bundle 'html5.vim'
-Bundle 'michaeljsmith/vim-indent-object'
-Bundle 'argtextobj.vim'
-Bundle 'mileszs/ack.vim'
-Bundle 'jmcantrell/vim-virtualenv'
-Bundle 'Shougo/neocomplcache'
-Bundle 'digitaltoad/vim-jade'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'tuxcanfly/vim-json'
-Bundle 'majutsushi/tagbar'
-Bundle 'skwp/greplace.vim'
-Bundle 'kien/ctrlp.vim'
-Bundle 'jamessan/vim-gnupg'
-Bundle 'scrooloose/syntastic'
-Bundle 'benmills/vimux'
-Bundle 'tuxcanfly/vimux-django-tests'
-Bundle 'maksimr/vim-jsbeautify'
-Bundle 'nvie/vim-flake8'
-Bundle 'bling/vim-airline'
-Bundle 'dhruvasagar/vim-table-mode'
-Bundle 'Blackrush/vim-gocode'
-Bundle 'dgryski/vim-godef'
-
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-ragtag'
+Plugin 'tpope/vim-dispatch'
+Plugin 'tpope/vim-unimpaired'
+Plugin 'bkad/CamelCaseMotion'
+Plugin 'matchit.zip'
+Plugin 'tristen/vim-sparkup'
+Plugin 'vim-scripts/The-NERD-tree'
+Plugin 'vim-scripts/trailing-whitespace'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'vim-scripts/UltiSnips'
+Plugin 'html5.vim'
+Plugin 'michaeljsmith/vim-indent-object'
+Plugin 'argtextobj.vim'
+Plugin 'mileszs/ack.vim'
+Plugin 'jmcantrell/vim-virtualenv'
+Plugin 'Shougo/neocomplcache'
+Plugin 'digitaltoad/vim-jade'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'tuxcanfly/vim-json'
+Plugin 'majutsushi/tagbar'
+Plugin 'skwp/greplace.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'jamessan/vim-gnupg'
+Plugin 'scrooloose/syntastic'
+Plugin 'benmills/vimux'
+Plugin 'tuxcanfly/vimux-django-tests'
+Plugin 'maksimr/vim-jsbeautify'
+Plugin 'nvie/vim-flake8'
+Plugin 'bling/vim-airline'
+Plugin 'dhruvasagar/vim-table-mode'
+Plugin 'fatih/vim-go'
 """ ---- Keybindings ----
 
 " toggle fugitive status
@@ -179,15 +164,3 @@ noremap <C-l> <C-w>l
 " allow the . to execute once for each line of a visual selection
 vnoremap . :normal .<CR>
 let g:ackprg                            ="ack-grep -H --nocolor --nogroup --column"
-
-if has("autocmd")
-    filetype off
-    filetype plugin indent off
-    set runtimepath+=/usr/share/vim/addons
-    filetype plugin indent on
-endif
-
-if has("syntax")
-    syntax off
-    syntax on
-endif
