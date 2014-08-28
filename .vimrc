@@ -1,3 +1,4 @@
+syntax on
 filetype plugin on
 filetype plugin indent on
 
@@ -42,23 +43,15 @@ set completeopt     =menu
 set runtimepath     +=~/.vim/bundle/vundle/
 call vundle#rc()
 
-let NERDTreeIgnore                      =['\.pyc']
 let g:closetag_default_xml              =1
-let g:sparkupNextMapping                ='<c-h>'
-let g:ackprg                            ="ack-grep -H --nocolor --nogroup --column"
 let g:surround_{char2nr("r")}           ="_(u\r)"
-let g:virtualenv_directory              ="~/.virtualenvs2.7/"
-let g:Powerline_colorscheme             ="colorful"
-let g:Powerline_symbols                 ="unicode"
-let g:neocomplcache_enable_at_startup   =1
 let g:syntastic_python_flake8_args      ='--ignore=E501,E128,E225'
 let g:syntastic_mode_map                ={ 'mode': 'passive' }
-let g:signify_mapping_next_hunk         ='<leader>h'
-let g:signify_mapping_prev_hunk         ='<leader>H'
-let g:signify_mapping_toggle_highlight  ='<leader>T'
 let g:go_bin_path                       = expand("~/.bin")
+let g:go_snippet_engine                 = "neosnippet"
+let g:go_doc_keywordprg_enabled         = 0
 
-colorscheme wombat256mod
+colorscheme molokai
 
 if filereadable(".lvimrc")
     source .lvimrc
@@ -73,41 +66,27 @@ autocmd     FileType            python      compiler    pyunit
 autocmd     FileType            modula2     set         ft          =markdown
 autocmd     FileType            go          setlocal    noexpandtab
 
+"au BufNewFile *.go setlocal filetype=go fileencoding=utf-8 fileformat=unix
+"au BufRead *.go setlocal filetype=go fileencoding=utf-8 fileformat=unix
+"au BufReadPost *.go setlocal filetype=go fileencoding=utf-8 fileformat=unix
+
 """ ---- Plugins ------
 
+Plugin 'fatih/vim-go'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-ragtag'
 Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-unimpaired'
-Plugin 'bkad/CamelCaseMotion'
-Plugin 'matchit.zip'
-Plugin 'tristen/vim-sparkup'
-Plugin 'vim-scripts/The-NERD-tree'
-Plugin 'vim-scripts/trailing-whitespace'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'vim-scripts/UltiSnips'
-Plugin 'html5.vim'
-Plugin 'michaeljsmith/vim-indent-object'
-Plugin 'argtextobj.vim'
-Plugin 'mileszs/ack.vim'
-Plugin 'jmcantrell/vim-virtualenv'
-Plugin 'Shougo/neocomplcache'
-Plugin 'digitaltoad/vim-jade'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'tuxcanfly/vim-json'
 Plugin 'majutsushi/tagbar'
-Plugin 'skwp/greplace.vim'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'Shougo/neocomplete.vim'
+Plugin 'Shougo/neosnippet'
+Plugin 'Shougo/neosnippet-snippets'
 Plugin 'kien/ctrlp.vim'
-Plugin 'jamessan/vim-gnupg'
 Plugin 'scrooloose/syntastic'
-Plugin 'benmills/vimux'
-Plugin 'tuxcanfly/vimux-django-tests'
-Plugin 'maksimr/vim-jsbeautify'
-Plugin 'nvie/vim-flake8'
-Plugin 'bling/vim-airline'
 Plugin 'dhruvasagar/vim-table-mode'
-Plugin 'fatih/vim-go'
+Plugin 'bling/vim-airline'
 """ ---- Keybindings ----
 
 " toggle fugitive status
@@ -126,9 +105,6 @@ map <leader>g   :Ggrep <cword>
 " remove trailing whitespace
 map <leader>w :FixWhitespace<CR>
 
-nmap <F3>       :TagbarToggle<CR>
-nmap <F4>       :NERDTreeToggle<CR>
-nmap <F5>       :!ctags -R<CR>
 nmap <F6>       :SyntasticToggleMode<CR>
 nmap <leader>fp :Git push<CR>
 nmap <leader>fm :Git pull<CR>
@@ -160,7 +136,22 @@ noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
 
+noremap q :close<CR>
 
-" allow the . to execute once for each line of a visual selection
-vnoremap . :normal .<CR>
-let g:ackprg                            ="ack-grep -H --nocolor --nogroup --column"
+" Plugin key-mappings.
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
+
+" SuperTab like snippets behavior.
+imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)"
+\: pumvisible() ? "\<C-n>" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)"
+\: "\<TAB>"
+
+" For snippet_complete marker.
+if has('conceal')
+  set conceallevel=2 concealcursor=i
+endif
