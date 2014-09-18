@@ -32,7 +32,6 @@ set wildignore      =*.py[co]
 set wildmode        =full
 set wildmenu
 set clipboard       =unnamedplus
-set gfn             =Sauce\ Code\ Powerline\ Regular\ 14
 set background      =dark
 set tags            +=~/.tags/django.tags
 set path            +=templates
@@ -51,7 +50,7 @@ let g:go_bin_path                       = expand("~/.bin")
 let g:go_snippet_engine                 = "neosnippet"
 let g:go_doc_keywordprg_enabled         = 0
 
-colorscheme molokai
+colorscheme hemisu
 
 if filereadable(".lvimrc")
     source .lvimrc
@@ -66,9 +65,11 @@ autocmd     FileType            python      compiler    pyunit
 autocmd     FileType            modula2     set         ft          =markdown
 autocmd     FileType            go          setlocal    noexpandtab
 
-"au BufNewFile *.go setlocal filetype=go fileencoding=utf-8 fileformat=unix
-"au BufRead *.go setlocal filetype=go fileencoding=utf-8 fileformat=unix
-"au BufReadPost *.go setlocal filetype=go fileencoding=utf-8 fileformat=unix
+au BufNewFile *.go setlocal filetype=go fileencoding=utf-8 fileformat=unix
+au BufRead *.go setlocal filetype=go fileencoding=utf-8 fileformat=unix
+au BufReadPost *.go setlocal filetype=go fileencoding=utf-8 fileformat=unix
+
+au BufWrite *.c :Autoformat<CR><CR>
 
 """ ---- Plugins ------
 
@@ -78,6 +79,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-ragtag'
 Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-unimpaired'
+Plugin 'tpope/vim-abolish'
 Plugin 'majutsushi/tagbar'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'Shougo/neocomplete.vim'
@@ -87,6 +89,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'dhruvasagar/vim-table-mode'
 Plugin 'bling/vim-airline'
+Plugin 'Chiel92/vim-autoformat'
 """ ---- Keybindings ----
 
 " toggle fugitive status
@@ -136,7 +139,7 @@ noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
 
-noremap q :close<CR>
+"noremap q :close<CR>
 
 " Plugin key-mappings.
 imap <C-k>     <Plug>(neosnippet_expand_or_jump)
