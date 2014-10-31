@@ -32,7 +32,6 @@ set wildignore      =*.py[co]
 set wildmode        =full
 set wildmenu
 set clipboard       =unnamedplus
-set background      =dark
 set tags            +=~/.tags/django.tags
 set path            +=templates
 set includeexpr     =substitute(v:fname,'\\.','/','g')
@@ -50,7 +49,9 @@ let g:go_bin_path                       = expand("~/.bin")
 let g:go_snippet_engine                 = "neosnippet"
 let g:go_doc_keywordprg_enabled         = 0
 
-colorscheme hemisu
+colorscheme badwolf
+
+set background      =dark
 
 if filereadable(".lvimrc")
     source .lvimrc
@@ -90,6 +91,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'dhruvasagar/vim-table-mode'
 Plugin 'bling/vim-airline'
 Plugin 'Chiel92/vim-autoformat'
+Plugin 'skwp/greplace.vim'
 """ ---- Keybindings ----
 
 " toggle fugitive status
@@ -102,7 +104,7 @@ map <silent><leader><Enter> o<Esc>k
 map <silent>K       :tabnext<CR>
 map <silent>J       :tabprevious<CR>
 " new tab
-map <Leader>t :tabnew<CR>
+map <Leader>T :tabnew<CR>
 " Project search
 map <leader>g   :Ggrep <cword>
 " remove trailing whitespace
@@ -116,6 +118,7 @@ nmap <leader>fw :Gwrite<CR>
 nmap <C-s>      :wa<CR>
 nmap <leader>x  :x<CR>
 nmap <F9>       :Dispatch<CR>
+nnoremap !d :.!date +\%Y-\%m-\%d\ \%H:\%M<CR>
 
 
 " clear search highlight
