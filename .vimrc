@@ -49,9 +49,7 @@ let g:go_bin_path                       = expand("~/.bin")
 let g:go_snippet_engine                 = "neosnippet"
 let g:go_doc_keywordprg_enabled         = 0
 
-colorscheme badwolf
-
-set background      =dark
+colorscheme herald
 
 if filereadable(".lvimrc")
     source .lvimrc
@@ -69,8 +67,7 @@ autocmd     FileType            go          setlocal    noexpandtab
 au BufNewFile *.go setlocal filetype=go fileencoding=utf-8 fileformat=unix
 au BufRead *.go setlocal filetype=go fileencoding=utf-8 fileformat=unix
 au BufReadPost *.go setlocal filetype=go fileencoding=utf-8 fileformat=unix
-
-au BufWrite *.c :Autoformat<CR><CR>
+autocmd BufWrite *.go :GoImports
 
 """ ---- Plugins ------
 
@@ -181,6 +178,7 @@ au FileType go nmap <leader>b <Plug>(go-build)
 au FileType go nmap <leader>t <Plug>(go-test)
 au FileType go nmap <leader>c <Plug>(go-coverage)
 au FileType go nmap <leader>i <Plug>(go-install)
+au FileType go nmap <leader>k <Plug>(go-imports)
 
 "Replace gd (Goto Declaration) for the word under your cursor (replaces current buffer):
 au FileType go nmap gd <Plug>(go-def)
